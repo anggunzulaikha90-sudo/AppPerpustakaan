@@ -104,6 +104,7 @@ public class ButtonCustom extends JButton {
             
             g2d.setColor(fill);
             g2d.fillRoundRect(s, s, w, h, roundedCorner, roundedCorner);
+            
         }
         super.paintComponent(g);
     }
@@ -115,7 +116,7 @@ public class ButtonCustom extends JButton {
         fillOver = new Color(38,17,112);
         fillClick = new Color(28,12,82);
         strokeWidth = 2;
-        roundedCorner = 10;
+        roundedCorner =50;
         fill = fillOriginal;
         icon = null;
         
@@ -125,6 +126,7 @@ public class ButtonCustom extends JButton {
         setContentAreaFilled(false);
         setBackground(fillOriginal);
         setForeground(Color.WHITE);
+        
         
         addMouseListener(new MouseAdapter(){
             @Override
