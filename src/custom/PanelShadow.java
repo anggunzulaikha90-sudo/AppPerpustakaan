@@ -12,10 +12,10 @@ import javax.swing.border.EmptyBorder;
 
 public class PanelShadow extends JPanel {
 
-    private int shadowSize = 44;      // ruang untuk bayangan di tiap sisi
-    private int blurRadius = 22;      // makin besar makin lembut
-    private int offsetY = 16;         // bayangan turun ke bawah
-    private int shadowAlpha = 50;     // 0-255, makin besar makin pekat
+    private int shadowSize = 44;      
+    private int blurRadius = 22;      
+    private int offsetY = 16;         
+    private int shadowAlpha = 50;     
     private int roundedCorner = 32;
     private Color shadowColor = new Color(45, 22, 140);
 
