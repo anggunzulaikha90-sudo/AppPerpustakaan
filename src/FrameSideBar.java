@@ -29,6 +29,7 @@ public class FrameSideBar extends javax.swing.JFrame {
         inisiasiPanel();
         setActiveMenu(bDashboard);
         cardLayout.show(panelUtama, "dashboard");
+        
     }
     
     void setActiveMenu(JButton active) {
@@ -39,11 +40,11 @@ public class FrameSideBar extends javax.swing.JFrame {
     for (JButton b : menu) {
         b.setSelected(b == active);
         if (b == active) {
-            b.setBackground(ungu);
-            b.setForeground(java.awt.Color.WHITE);
-        } else {
             b.setBackground(java.awt.Color.WHITE);
             b.setForeground(ungu);
+        } else {
+            b.setBackground(ungu);
+            b.setForeground(java.awt.Color.WHITE);
         }
     }
 }
@@ -74,71 +75,94 @@ public class FrameSideBar extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         bLogout = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
         panelUtama = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1024, 737));
 
-        sideBar.setBackground(new java.awt.Color(255, 255, 255));
+        sideBar.setBackground(new java.awt.Color(47, 22, 138));
         sideBar.setPreferredSize(new java.awt.Dimension(256, 720));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Sistem Informasi Perpustakaan");
+        jLabel2.setText("Sistem Informasi Perpusatkaan");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("SD Negeri Cangkringan");
 
-        bDashboard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Dashboard ungu.png"))); // NOI18N
+        bDashboard.setBackground(new java.awt.Color(47, 22, 138));
+        bDashboard.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bDashboard.setForeground(new java.awt.Color(255, 255, 255));
+        bDashboard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Dashboard putih.png"))); // NOI18N
         bDashboard.setText("Dashboard");
         bDashboard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         bDashboard.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bDashboard.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bDashboard.setIconTextGap(15);
-        bDashboard.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Dashboard putih.png"))); // NOI18N
+        bDashboard.setMargin(new java.awt.Insets(2, 30, 3, 14));
+        bDashboard.setOpaque(true);
+        bDashboard.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Dashboard ungu.png"))); // NOI18N
         bDashboard.addActionListener(this::bDashboardActionPerformed);
 
-        bDataMaster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
+        bDataMaster.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bDataMaster.setForeground(new java.awt.Color(255, 255, 255));
+        bDataMaster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
         bDataMaster.setText("Data Master");
         bDataMaster.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         bDataMaster.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bDataMaster.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bDataMaster.setIconTextGap(15);
-        bDataMaster.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
+        bDataMaster.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
         bDataMaster.addActionListener(this::bDataMasterActionPerformed);
 
-        bTransaksi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi ungu kecil.png"))); // NOI18N
+        bTransaksi.setBackground(new java.awt.Color(47, 22, 138));
+        bTransaksi.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bTransaksi.setForeground(new java.awt.Color(255, 255, 255));
+        bTransaksi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
         bTransaksi.setText("Transaksi");
         bTransaksi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         bTransaksi.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bTransaksi.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bTransaksi.setIconTextGap(15);
-        bTransaksi.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
+        bTransaksi.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi ungu kecil.png"))); // NOI18N
         bTransaksi.addActionListener(this::bTransaksiActionPerformed);
 
-        bLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
+        bLaporan.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bLaporan.setForeground(new java.awt.Color(255, 255, 255));
+        bLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
         bLaporan.setText("Laporan");
         bLaporan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         bLaporan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bLaporan.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bLaporan.setIconTextGap(15);
-        bLaporan.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
+        bLaporan.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
         bLaporan.addActionListener(this::bLaporanActionPerformed);
 
-        bAkunPengguna.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person ungu.png"))); // NOI18N
+        bAkunPengguna.setBackground(new java.awt.Color(47, 22, 138));
+        bAkunPengguna.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bAkunPengguna.setForeground(new java.awt.Color(255, 255, 255));
+        bAkunPengguna.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person putih.png"))); // NOI18N
         bAkunPengguna.setText("Akun Pengguna");
         bAkunPengguna.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         bAkunPengguna.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bAkunPengguna.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bAkunPengguna.setIconTextGap(15);
-        bAkunPengguna.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person putih.png"))); // NOI18N
+        bAkunPengguna.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person ungu.png"))); // NOI18N
         bAkunPengguna.addActionListener(this::bAkunPenggunaActionPerformed);
 
-        jSeparator1.setForeground(new java.awt.Color(47, 22, 138));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo sd cangkringan (1).png"))); // NOI18N
 
-        bLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logout UNGU.png"))); // NOI18N
+        bLogout.setBackground(new java.awt.Color(47, 22, 138));
+        bLogout.setForeground(new java.awt.Color(255, 255, 255));
+        bLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logout PUTIH.png"))); // NOI18N
         bLogout.setText("LOGOUT");
         bLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         bLogout.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -146,39 +170,53 @@ public class FrameSideBar extends javax.swing.JFrame {
         bLogout.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logout PUTIH.png"))); // NOI18N
         bLogout.addActionListener(this::bLogoutActionPerformed);
 
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout sideBarLayout = new javax.swing.GroupLayout(sideBar);
         sideBar.setLayout(sideBarLayout);
         sideBarLayout.setHorizontalGroup(
             sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
             .addGroup(sideBarLayout.createSequentialGroup()
                 .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(sideBarLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jSeparator1)
-                            .addComponent(bLogout, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)))
+                        .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(sideBarLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(bLogout, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                                    .addComponent(jSeparator2)))
+                            .addGroup(sideBarLayout.createSequentialGroup()
+                                .addGap(102, 102, 102)
+                                .addComponent(jLabel1)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                     .addGroup(sideBarLayout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addComponent(jLabel1)))
+                        .addContainerGap()
+                        .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bAkunPengguna, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bLaporan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bTransaksi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bDataMaster, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bDashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
+            .addGroup(sideBarLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(bAkunPengguna, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(bLaporan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(bTransaksi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(bDataMaster, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(bDashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         sideBarLayout.setVerticalGroup(
             sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sideBarLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addGap(39, 39, 39)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
                 .addComponent(bDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bDataMaster, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -188,8 +226,8 @@ public class FrameSideBar extends javax.swing.JFrame {
                 .addComponent(bLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bAkunPengguna, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 284, Short.MAX_VALUE)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
@@ -264,6 +302,7 @@ public class FrameSideBar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel panelUtama;
     private javax.swing.JPanel sideBar;
     // End of variables declaration//GEN-END:variables
