@@ -21,7 +21,7 @@ public class FrameLogin extends javax.swing.JFrame {
      */
     public FrameLogin() {
         initComponents();
-        bLogin.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 20));
+        
     }
 
     /**
@@ -48,12 +48,17 @@ public class FrameLogin extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jCheckBox3 = new javax.swing.JCheckBox();
-        bLogin = new custom.ButtonCustom();
         jLabel12 = new javax.swing.JLabel();
+        bLogin = new custom.ButtonCustom();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1024, 737));
+        setMinimumSize(new java.awt.Dimension(1024, 737));
+        setPreferredSize(new java.awt.Dimension(1024, 737));
 
         jPanel2.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel2.setMinimumSize(new java.awt.Dimension(1024, 737));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1024, 737));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
         panelShadow2.setBackground(new java.awt.Color(255, 255, 255));
@@ -157,14 +162,9 @@ public class FrameLogin extends javax.swing.JFrame {
             }
         });
 
-        bLogin.setText("LOGIN");
-        bLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bLoginActionPerformed(evt);
-            }
-        });
-
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-close-25.png"))); // NOI18N
+
+        bLogin.setText("Login");
 
         javax.swing.GroupLayout panelShadow2Layout = new javax.swing.GroupLayout(panelShadow2);
         panelShadow2.setLayout(panelShadow2Layout);
@@ -193,8 +193,8 @@ public class FrameLogin extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jSeparator1)
                     .addComponent(panelCustom6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelCustom3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panelCustom3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelShadow2Layout.setVerticalGroup(
@@ -223,9 +223,9 @@ public class FrameLogin extends javax.swing.JFrame {
                 .addComponent(panelCustom6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBox3)
-                .addGap(28, 28, 28)
-                .addComponent(bLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(bLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         jPanel2.add(panelShadow2, new java.awt.GridBagConstraints());
@@ -233,6 +233,7 @@ public class FrameLogin extends javax.swing.JFrame {
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
@@ -242,10 +243,6 @@ public class FrameLogin extends javax.swing.JFrame {
     private void tUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tUserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tUserActionPerformed
-
-    private void bLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bLoginActionPerformed
 
     /**
      * @param args the command line arguments

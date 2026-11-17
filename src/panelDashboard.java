@@ -91,33 +91,16 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel6.setBackground(new java.awt.Color(243, 246, 250));
         jPanel6.setPreferredSize(new java.awt.Dimension(500, 80));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel15.setText("Dashboard");
+        jPanel6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 102, 102));
         jLabel1.setText("Ringkasan aktivitas perpustakaan hari ini");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel1))
-                .addContainerGap(246, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(0, 16, Short.MAX_VALUE))
-        );
+        jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
 
         jPanel4.add(jPanel6, java.awt.BorderLayout.LINE_START);
 
@@ -238,7 +221,9 @@ public class panelDashboard extends javax.swing.JPanel {
         add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.setBackground(new java.awt.Color(243, 246, 250));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1024, 290));
+        jPanel2.setMinimumSize(new java.awt.Dimension(1024, 300));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1024, 300));
+        jPanel2.setLayout(new java.awt.BorderLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -253,35 +238,22 @@ public class panelDashboard extends javax.swing.JPanel {
         ));
         tDashboard.setViewportView(jTable1);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(tDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, 958, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel2.add(tDashboard, java.awt.BorderLayout.CENTER);
 
         add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
-        jPanel3.setMinimumSize(new java.awt.Dimension(1024, 150));
-        jPanel3.setPreferredSize(new java.awt.Dimension(1024, 150));
+        jPanel3.setMinimumSize(new java.awt.Dimension(1024, 152));
+        jPanel3.setPreferredSize(new java.awt.Dimension(1024, 152));
         jPanel3.setLayout(new java.awt.CardLayout());
 
         jPanel13.setBackground(new java.awt.Color(243, 246, 250));
-        jPanel13.setPreferredSize(new java.awt.Dimension(1024, 150));
+        jPanel13.setMinimumSize(new java.awt.Dimension(1024, 152));
+        jPanel13.setPreferredSize(new java.awt.Dimension(1024, 152));
         jPanel13.setLayout(new java.awt.GridLayout(1, 4, 20, 0));
 
-        jPanel14.setMinimumSize(new java.awt.Dimension(200, 150));
+        jPanel14.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel14.setOpaque(false);
-        jPanel14.setPreferredSize(new java.awt.Dimension(200, 150));
+        jPanel14.setPreferredSize(new java.awt.Dimension(200, 152));
         jPanel14.setLayout(new java.awt.BorderLayout());
 
         panelCustom2.setMinimumSize(new java.awt.Dimension(766, 150));
@@ -342,9 +314,9 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel13.add(jPanel14);
 
-        jPanel16.setMinimumSize(new java.awt.Dimension(200, 150));
+        jPanel16.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel16.setOpaque(false);
-        jPanel16.setPreferredSize(new java.awt.Dimension(200, 150));
+        jPanel16.setPreferredSize(new java.awt.Dimension(200, 152));
         jPanel16.setLayout(new java.awt.BorderLayout());
 
         panelCustom4.setMinimumSize(new java.awt.Dimension(766, 150));
@@ -400,9 +372,9 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel13.add(jPanel16);
 
-        jPanel18.setMinimumSize(new java.awt.Dimension(200, 150));
+        jPanel18.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel18.setOpaque(false);
-        jPanel18.setPreferredSize(new java.awt.Dimension(200, 150));
+        jPanel18.setPreferredSize(new java.awt.Dimension(200, 152));
         jPanel18.setLayout(new java.awt.BorderLayout());
 
         panelCustom6.setMinimumSize(new java.awt.Dimension(766, 150));
@@ -457,9 +429,9 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel13.add(jPanel18);
 
-        jPanel20.setMinimumSize(new java.awt.Dimension(200, 150));
+        jPanel20.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel20.setOpaque(false);
-        jPanel20.setPreferredSize(new java.awt.Dimension(200, 150));
+        jPanel20.setPreferredSize(new java.awt.Dimension(200, 152));
         jPanel20.setLayout(new java.awt.BorderLayout());
 
         panelCustom8.setMinimumSize(new java.awt.Dimension(766, 150));

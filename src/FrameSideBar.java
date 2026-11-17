@@ -29,11 +29,12 @@ public class FrameSideBar extends javax.swing.JFrame {
         inisiasiPanel();
         setActiveMenu(bDashboard);
         cardLayout.show(panelUtama, "dashboard");
+        subDataMaster.setVisible(false);
         
     }
     
     void setActiveMenu(JButton active) {
-    JButton[] menu = {bDashboard, bDataMaster, bTransaksi, bLaporan, bAkunPengguna};
+    JButton[] menu = {bDashboard, bDataMaster, bTransaksi, bLaporan, bAkunPengguna, bLogout};
 
     java.awt.Color ungu = new java.awt.Color(0x2F168A);
 
@@ -76,6 +77,12 @@ public class FrameSideBar extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         bLogout = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
+        subDataMaster = new javax.swing.JPanel();
+        bDataMaster1 = new javax.swing.JButton();
+        bDataMaster6 = new javax.swing.JButton();
+        bDataMaster7 = new javax.swing.JButton();
+        bDataMaster8 = new javax.swing.JButton();
+        bDataMaster9 = new javax.swing.JButton();
         panelUtama = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -100,6 +107,7 @@ public class FrameSideBar extends javax.swing.JFrame {
         bDashboard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Dashboard putih.png"))); // NOI18N
         bDashboard.setText("Dashboard");
         bDashboard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bDashboard.setBorderPainted(false);
         bDashboard.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bDashboard.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bDashboard.setIconTextGap(15);
@@ -114,9 +122,11 @@ public class FrameSideBar extends javax.swing.JFrame {
         bDataMaster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
         bDataMaster.setText("Data Master");
         bDataMaster.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bDataMaster.setBorderPainted(false);
         bDataMaster.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bDataMaster.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bDataMaster.setIconTextGap(15);
+        bDataMaster.setOpaque(true);
         bDataMaster.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
         bDataMaster.addActionListener(this::bDataMasterActionPerformed);
 
@@ -126,9 +136,11 @@ public class FrameSideBar extends javax.swing.JFrame {
         bTransaksi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
         bTransaksi.setText("Transaksi");
         bTransaksi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bTransaksi.setBorderPainted(false);
         bTransaksi.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bTransaksi.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bTransaksi.setIconTextGap(15);
+        bTransaksi.setOpaque(true);
         bTransaksi.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi ungu kecil.png"))); // NOI18N
         bTransaksi.addActionListener(this::bTransaksiActionPerformed);
 
@@ -138,9 +150,11 @@ public class FrameSideBar extends javax.swing.JFrame {
         bLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
         bLaporan.setText("Laporan");
         bLaporan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bLaporan.setBorderPainted(false);
         bLaporan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bLaporan.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bLaporan.setIconTextGap(15);
+        bLaporan.setOpaque(true);
         bLaporan.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
         bLaporan.addActionListener(this::bLaporanActionPerformed);
 
@@ -150,9 +164,11 @@ public class FrameSideBar extends javax.swing.JFrame {
         bAkunPengguna.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person putih.png"))); // NOI18N
         bAkunPengguna.setText("Akun Pengguna");
         bAkunPengguna.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bAkunPengguna.setBorderPainted(false);
         bAkunPengguna.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bAkunPengguna.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bAkunPengguna.setIconTextGap(15);
+        bAkunPengguna.setOpaque(true);
         bAkunPengguna.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person ungu.png"))); // NOI18N
         bAkunPengguna.addActionListener(this::bAkunPenggunaActionPerformed);
 
@@ -167,16 +183,120 @@ public class FrameSideBar extends javax.swing.JFrame {
         bLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         bLogout.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         bLogout.setIconTextGap(15);
-        bLogout.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logout PUTIH.png"))); // NOI18N
+        bLogout.setOpaque(true);
+        bLogout.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logout UNGU.png"))); // NOI18N
         bLogout.addActionListener(this::bLogoutActionPerformed);
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+
+        subDataMaster.setBackground(new java.awt.Color(47, 22, 138));
+
+        bDataMaster1.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bDataMaster1.setForeground(new java.awt.Color(255, 255, 255));
+        bDataMaster1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
+        bDataMaster1.setText("Data Siswa");
+        bDataMaster1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bDataMaster1.setBorderPainted(false);
+        bDataMaster1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bDataMaster1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bDataMaster1.setIconTextGap(15);
+        bDataMaster1.setOpaque(true);
+        bDataMaster1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
+        bDataMaster1.addActionListener(this::bDataMaster1ActionPerformed);
+
+        bDataMaster6.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bDataMaster6.setForeground(new java.awt.Color(255, 255, 255));
+        bDataMaster6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
+        bDataMaster6.setText("Data Guru");
+        bDataMaster6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bDataMaster6.setBorderPainted(false);
+        bDataMaster6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bDataMaster6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bDataMaster6.setIconTextGap(15);
+        bDataMaster6.setOpaque(true);
+        bDataMaster6.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
+
+        bDataMaster7.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bDataMaster7.setForeground(new java.awt.Color(255, 255, 255));
+        bDataMaster7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
+        bDataMaster7.setText("Data Kelas");
+        bDataMaster7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bDataMaster7.setBorderPainted(false);
+        bDataMaster7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bDataMaster7.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bDataMaster7.setIconTextGap(15);
+        bDataMaster7.setOpaque(true);
+        bDataMaster7.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
+
+        bDataMaster8.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bDataMaster8.setForeground(new java.awt.Color(255, 255, 255));
+        bDataMaster8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
+        bDataMaster8.setText("Data Kategori");
+        bDataMaster8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bDataMaster8.setBorderPainted(false);
+        bDataMaster8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bDataMaster8.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bDataMaster8.setIconTextGap(15);
+        bDataMaster8.setOpaque(true);
+        bDataMaster8.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
+
+        bDataMaster9.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bDataMaster9.setForeground(new java.awt.Color(255, 255, 255));
+        bDataMaster9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
+        bDataMaster9.setText("Data Buku");
+        bDataMaster9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bDataMaster9.setBorderPainted(false);
+        bDataMaster9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bDataMaster9.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bDataMaster9.setIconTextGap(15);
+        bDataMaster9.setOpaque(true);
+        bDataMaster9.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
+        bDataMaster9.addActionListener(this::bDataMaster9ActionPerformed);
+
+        javax.swing.GroupLayout subDataMasterLayout = new javax.swing.GroupLayout(subDataMaster);
+        subDataMaster.setLayout(subDataMasterLayout);
+        subDataMasterLayout.setHorizontalGroup(
+            subDataMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(subDataMasterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(subDataMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bDataMaster1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bDataMaster6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bDataMaster7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bDataMaster8, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                    .addComponent(bDataMaster9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        subDataMasterLayout.setVerticalGroup(
+            subDataMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(subDataMasterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bDataMaster1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bDataMaster9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bDataMaster6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bDataMaster7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bDataMaster8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout sideBarLayout = new javax.swing.GroupLayout(sideBar);
         sideBar.setLayout(sideBarLayout);
         sideBarLayout.setHorizontalGroup(
             sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(sideBarLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(sideBarLayout.createSequentialGroup()
                 .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(sideBarLayout.createSequentialGroup()
@@ -198,12 +318,11 @@ public class FrameSideBar extends javax.swing.JFrame {
                             .addComponent(bLaporan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(bTransaksi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(bDataMaster, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bDashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(bDashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sideBarLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(subDataMaster, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
-            .addGroup(sideBarLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         sideBarLayout.setVerticalGroup(
             sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,13 +339,15 @@ public class FrameSideBar extends javax.swing.JFrame {
                 .addComponent(bDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bDataMaster, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(subDataMaster, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bAkunPengguna, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 284, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -235,6 +356,8 @@ public class FrameSideBar extends javax.swing.JFrame {
 
         getContentPane().add(sideBar, java.awt.BorderLayout.LINE_START);
 
+        panelUtama.setMinimumSize(new java.awt.Dimension(1024, 737));
+        panelUtama.setPreferredSize(new java.awt.Dimension(1024, 737));
         panelUtama.setLayout(new java.awt.CardLayout());
         getContentPane().add(panelUtama, java.awt.BorderLayout.CENTER);
 
@@ -250,6 +373,10 @@ public class FrameSideBar extends javax.swing.JFrame {
     private void bDataMasterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDataMasterActionPerformed
         // TODO add your handling code here:
         setActiveMenu(bDataMaster);
+        
+        subDataMaster.setVisible(!subDataMaster.isVisible());
+        sideBar.revalidate();
+        sideBar.repaint();
     }//GEN-LAST:event_bDataMasterActionPerformed
 
     private void bTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTransaksiActionPerformed
@@ -270,7 +397,22 @@ public class FrameSideBar extends javax.swing.JFrame {
     private void bLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogoutActionPerformed
         // TODO add your handling code here:
         setActiveMenu(bLogout);
+        int pilih = javax.swing.JOptionPane.showConfirmDialog(this,
+            "Yakin ingin logout?", "Logout", javax.swing.JOptionPane.YES_NO_OPTION);
+        if (pilih == javax.swing.JOptionPane.YES_OPTION) {
+        dispose();
+        new FrameLogin().setVisible(true);
+    }
     }//GEN-LAST:event_bLogoutActionPerformed
+
+    private void bDataMaster9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDataMaster9ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_bDataMaster9ActionPerformed
+
+    private void bDataMaster1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDataMaster1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bDataMaster1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -288,6 +430,38 @@ public class FrameSideBar extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
+        //Desain Button SideBar
+        java.awt.Color ungu = new java.awt.Color(0x2F168A);
+        
+        
+        UIManager.put("Button.arc", 26);
+        UIManager.put("Button.selectedBackground", java.awt.Color.WHITE);
+        UIManager.put("Button.selectedForeground", ungu);
+        
+        // Desain JOptionPane
+        java.awt.Color abu  = new java.awt.Color(0xC8CCD6);
+        UIManager.put("OptionPane.background", java.awt.Color.WHITE);
+        UIManager.put("Panel.background", java.awt.Color.WHITE);              
+        UIManager.put("OptionPane.messageForeground", new java.awt.Color(0x1E1B4B));
+        UIManager.put("OptionPane.border", javax.swing.BorderFactory.createCompoundBorder(
+            javax.swing.BorderFactory.createLineBorder(abu, 1),          
+            javax.swing.BorderFactory.createEmptyBorder(16, 20, 16, 20)));
+        // Desain tombol biasa 
+        UIManager.put("Button.background", java.awt.Color.WHITE);
+        UIManager.put("Button.foreground", ungu);
+        UIManager.put("Button.hoverBackground", new java.awt.Color(0xEEEAFB));
+        UIManager.put("Button.pressedBackground", new java.awt.Color(0xDDD6F5));
+        UIManager.put("Button.borderColor", abu);
+        // Desain tombol default 
+        UIManager.put("Button.default.background", ungu);
+        UIManager.put("Button.default.foreground", java.awt.Color.WHITE);
+        UIManager.put("Button.default.hoverBackground", new java.awt.Color(0x3D22A8));
+        UIManager.put("Button.default.pressedBackground", new java.awt.Color(0x1C0C52));
+        UIManager.put("Button.default.focusedBackground", ungu);
+        UIManager.put("Button.default.foreground", java.awt.Color.WHITE);
+        
+        
         java.awt.EventQueue.invokeLater(() -> new FrameSideBar().setVisible(true));
     }
 
@@ -295,6 +469,11 @@ public class FrameSideBar extends javax.swing.JFrame {
     private javax.swing.JButton bAkunPengguna;
     private javax.swing.JButton bDashboard;
     private javax.swing.JButton bDataMaster;
+    private javax.swing.JButton bDataMaster1;
+    private javax.swing.JButton bDataMaster6;
+    private javax.swing.JButton bDataMaster7;
+    private javax.swing.JButton bDataMaster8;
+    private javax.swing.JButton bDataMaster9;
     private javax.swing.JButton bLaporan;
     private javax.swing.JButton bLogout;
     private javax.swing.JButton bTransaksi;
@@ -305,5 +484,6 @@ public class FrameSideBar extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel panelUtama;
     private javax.swing.JPanel sideBar;
+    private javax.swing.JPanel subDataMaster;
     // End of variables declaration//GEN-END:variables
 }

@@ -28,7 +28,27 @@ public class ButtonCustom extends JButton {
     private Color fillClick;
     private int strokeWidth;
     private int roundedCorner;
+    private int fontSize;
+    private GayaFont fontGaya;
+    
+    
+    public enum GayaFont {
+    PLAIN(java.awt.Font.PLAIN),
+    BOLD(java.awt.Font.BOLD),
+    ITALIC(java.awt.Font.ITALIC),
+    BOLD_ITALIC(java.awt.Font.BOLD | java.awt.Font.ITALIC);
 
+    private final int nilai;
+
+    GayaFont(int nilai) {
+        this.nilai = nilai;
+    }
+
+    
+    public int getNilai() {
+        return nilai;
+    }
+}
 
     public Icon getIcon() {
         return icon;
@@ -92,6 +112,29 @@ public class ButtonCustom extends JButton {
         this.roundedCorner = roundedCorner;
         repaint();
     }
+    
+    public int getFontSize() {
+    return fontSize;
+    }
+
+    public void setFontSize(int fontSize) {
+        this.fontSize = fontSize;
+        aturFont();
+    }
+
+    public GayaFont getFontGaya() {
+        return fontGaya;
+    }
+
+    public void setFontGaya(GayaFont fontGaya) {
+        this.fontGaya = fontGaya;
+        aturFont();
+    }
+
+    private void aturFont() {
+        setFont(getFont().deriveFont(fontGaya.getNilai(), (float) fontSize));
+        repaint();
+    }
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -126,7 +169,9 @@ public class ButtonCustom extends JButton {
         setContentAreaFilled(false);
         setBackground(fillOriginal);
         setForeground(Color.WHITE);
-        
+        fontSize = 14;
+        fontGaya = GayaFont.PLAIN;
+        aturFont();
         
         addMouseListener(new MouseAdapter(){
             @Override
