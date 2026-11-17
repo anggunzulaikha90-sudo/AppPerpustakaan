@@ -42,9 +42,6 @@ public class panelDashboard extends javax.swing.JPanel {
         jLabel17 = new javax.swing.JLabel();
         panelCustom12 = new custom.PanelCustom();
         jLabel20 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        tDashboard = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
@@ -75,6 +72,9 @@ public class panelDashboard extends javax.swing.JPanel {
         panelCustom9 = new custom.PanelCustom();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        tDashboard = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(243, 246, 250));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(243, 246, 250), 30));
@@ -83,6 +83,7 @@ public class panelDashboard extends javax.swing.JPanel {
         setLayout(new java.awt.BorderLayout());
 
         jPanel1.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1024, 200));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 200));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -218,29 +219,7 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel1.add(jPanel5, java.awt.BorderLayout.CENTER);
 
-        add(jPanel1, java.awt.BorderLayout.PAGE_START);
-
-        jPanel2.setBackground(new java.awt.Color(243, 246, 250));
-        jPanel2.setMinimumSize(new java.awt.Dimension(1024, 300));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1024, 300));
-        jPanel2.setLayout(new java.awt.BorderLayout());
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        tDashboard.setViewportView(jTable1);
-
-        jPanel2.add(tDashboard, java.awt.BorderLayout.CENTER);
-
-        add(jPanel2, java.awt.BorderLayout.PAGE_END);
+        add(jPanel1, java.awt.BorderLayout.NORTH);
 
         jPanel3.setMinimumSize(new java.awt.Dimension(1024, 152));
         jPanel3.setPreferredSize(new java.awt.Dimension(1024, 152));
@@ -490,6 +469,28 @@ public class panelDashboard extends javax.swing.JPanel {
         jPanel3.add(jPanel13, "card2");
 
         add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        jPanel2.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel2.setMinimumSize(new java.awt.Dimension(1024, 300));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1024, 550));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tDashboard.setViewportView(jTable1);
+
+        jPanel2.add(tDashboard, java.awt.BorderLayout.CENTER);
+
+        add(jPanel2, java.awt.BorderLayout.SOUTH);
     }// </editor-fold>//GEN-END:initComponents
 
 
