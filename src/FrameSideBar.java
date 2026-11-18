@@ -30,6 +30,8 @@ public class FrameSideBar extends javax.swing.JFrame {
         setActiveMenu(bDashboard);
         cardLayout.show(panelUtama, "dashboard");
         subDataMaster.setVisible(false);
+        subDataTransaksi.setVisible(false);
+        subLaporan.setVisible(false);
         
     }
     
@@ -83,6 +85,15 @@ public class FrameSideBar extends javax.swing.JFrame {
         bDataMaster7 = new javax.swing.JButton();
         bDataMaster8 = new javax.swing.JButton();
         bDataMaster9 = new javax.swing.JButton();
+        subDataTransaksi = new javax.swing.JPanel();
+        bTransaksi1 = new javax.swing.JButton();
+        bTransaksi2 = new javax.swing.JButton();
+        bTransaksi3 = new javax.swing.JButton();
+        subLaporan = new javax.swing.JPanel();
+        bLaporan1 = new javax.swing.JButton();
+        bLaporan2 = new javax.swing.JButton();
+        bLaporan3 = new javax.swing.JButton();
+        bLaporan4 = new javax.swing.JButton();
         panelUtama = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,7 +105,7 @@ public class FrameSideBar extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Sistem Informasi Perpusatkaan");
+        jLabel2.setText("Sistem Informasi Perpustakaan");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -162,7 +173,7 @@ public class FrameSideBar extends javax.swing.JFrame {
         bAkunPengguna.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bAkunPengguna.setForeground(new java.awt.Color(255, 255, 255));
         bAkunPengguna.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person putih.png"))); // NOI18N
-        bAkunPengguna.setText("Akun Pengguna");
+        bAkunPengguna.setText("Kelola Akun");
         bAkunPengguna.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         bAkunPengguna.setBorderPainted(false);
         bAkunPengguna.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -288,28 +299,156 @@ public class FrameSideBar extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        subDataTransaksi.setBackground(new java.awt.Color(47, 22, 138));
+        subDataTransaksi.setPreferredSize(new java.awt.Dimension(210, 186));
+
+        bTransaksi1.setBackground(new java.awt.Color(47, 22, 138));
+        bTransaksi1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bTransaksi1.setForeground(new java.awt.Color(255, 255, 255));
+        bTransaksi1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
+        bTransaksi1.setText("Cari Buku");
+        bTransaksi1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bTransaksi1.setBorderPainted(false);
+        bTransaksi1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bTransaksi1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bTransaksi1.setIconTextGap(15);
+        bTransaksi1.setOpaque(true);
+        bTransaksi1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi ungu kecil.png"))); // NOI18N
+        bTransaksi1.addActionListener(this::bTransaksi1ActionPerformed);
+
+        bTransaksi2.setBackground(new java.awt.Color(47, 22, 138));
+        bTransaksi2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bTransaksi2.setForeground(new java.awt.Color(255, 255, 255));
+        bTransaksi2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
+        bTransaksi2.setText("Peminjaman");
+        bTransaksi2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bTransaksi2.setBorderPainted(false);
+        bTransaksi2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bTransaksi2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bTransaksi2.setIconTextGap(15);
+        bTransaksi2.setOpaque(true);
+        bTransaksi2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi ungu kecil.png"))); // NOI18N
+        bTransaksi2.addActionListener(this::bTransaksi2ActionPerformed);
+
+        bTransaksi3.setBackground(new java.awt.Color(47, 22, 138));
+        bTransaksi3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bTransaksi3.setForeground(new java.awt.Color(255, 255, 255));
+        bTransaksi3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
+        bTransaksi3.setText("Pengembalian");
+        bTransaksi3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bTransaksi3.setBorderPainted(false);
+        bTransaksi3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bTransaksi3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bTransaksi3.setIconTextGap(15);
+        bTransaksi3.setOpaque(true);
+        bTransaksi3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi ungu kecil.png"))); // NOI18N
+        bTransaksi3.addActionListener(this::bTransaksi3ActionPerformed);
+
+        javax.swing.GroupLayout subDataTransaksiLayout = new javax.swing.GroupLayout(subDataTransaksi);
+        subDataTransaksi.setLayout(subDataTransaksiLayout);
+        subDataTransaksiLayout.setHorizontalGroup(
+            subDataTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bTransaksi1, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+            .addComponent(bTransaksi2, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+            .addComponent(bTransaksi3, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+        );
+        subDataTransaksiLayout.setVerticalGroup(
+            subDataTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(subDataTransaksiLayout.createSequentialGroup()
+                .addComponent(bTransaksi1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bTransaksi2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bTransaksi3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        subLaporan.setBackground(new java.awt.Color(47, 22, 138));
+        subLaporan.setPreferredSize(new java.awt.Dimension(210, 186));
+
+        bLaporan1.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bLaporan1.setForeground(new java.awt.Color(255, 255, 255));
+        bLaporan1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
+        bLaporan1.setText("Data Master");
+        bLaporan1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bLaporan1.setBorderPainted(false);
+        bLaporan1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bLaporan1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bLaporan1.setIconTextGap(15);
+        bLaporan1.setOpaque(true);
+        bLaporan1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
+        bLaporan1.addActionListener(this::bLaporan1ActionPerformed);
+
+        bLaporan2.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bLaporan2.setForeground(new java.awt.Color(255, 255, 255));
+        bLaporan2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
+        bLaporan2.setText("Peminjaman");
+        bLaporan2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bLaporan2.setBorderPainted(false);
+        bLaporan2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bLaporan2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bLaporan2.setIconTextGap(15);
+        bLaporan2.setOpaque(true);
+        bLaporan2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
+        bLaporan2.addActionListener(this::bLaporan2ActionPerformed);
+
+        bLaporan3.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bLaporan3.setForeground(new java.awt.Color(255, 255, 255));
+        bLaporan3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
+        bLaporan3.setText("Keterlambatan");
+        bLaporan3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bLaporan3.setBorderPainted(false);
+        bLaporan3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bLaporan3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bLaporan3.setIconTextGap(15);
+        bLaporan3.setOpaque(true);
+        bLaporan3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
+        bLaporan3.addActionListener(this::bLaporan3ActionPerformed);
+
+        bLaporan4.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bLaporan4.setForeground(new java.awt.Color(255, 255, 255));
+        bLaporan4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
+        bLaporan4.setText("Pengembalian");
+        bLaporan4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        bLaporan4.setBorderPainted(false);
+        bLaporan4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bLaporan4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bLaporan4.setIconTextGap(15);
+        bLaporan4.setOpaque(true);
+        bLaporan4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
+        bLaporan4.addActionListener(this::bLaporan4ActionPerformed);
+
+        javax.swing.GroupLayout subLaporanLayout = new javax.swing.GroupLayout(subLaporan);
+        subLaporan.setLayout(subLaporanLayout);
+        subLaporanLayout.setHorizontalGroup(
+            subLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bLaporan1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bLaporan2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bLaporan3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bLaporan4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        subLaporanLayout.setVerticalGroup(
+            subLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(subLaporanLayout.createSequentialGroup()
+                .addComponent(bLaporan1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bLaporan2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bLaporan3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bLaporan4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
         javax.swing.GroupLayout sideBarLayout = new javax.swing.GroupLayout(sideBar);
         sideBar.setLayout(sideBarLayout);
         sideBarLayout.setHorizontalGroup(
             sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(sideBarLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(sideBarLayout.createSequentialGroup()
                 .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(sideBarLayout.createSequentialGroup()
-                        .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(sideBarLayout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(bLogout, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
-                                    .addComponent(jSeparator2)))
-                            .addGroup(sideBarLayout.createSequentialGroup()
-                                .addGap(102, 102, 102)
-                                .addComponent(jLabel1)))
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                     .addGroup(sideBarLayout.createSequentialGroup()
                         .addContainerGap()
@@ -321,7 +460,27 @@ public class FrameSideBar extends javax.swing.JFrame {
                             .addComponent(bDashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sideBarLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(subDataMaster, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(subDataMaster, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(sideBarLayout.createSequentialGroup()
+                        .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(sideBarLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(bLogout, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                                    .addComponent(jSeparator2)))
+                            .addGroup(sideBarLayout.createSequentialGroup()
+                                .addGap(102, 102, 102)
+                                .addComponent(jLabel1))
+                            .addGroup(sideBarLayout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sideBarLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(subDataTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(sideBarLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(subLaporan, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         sideBarLayout.setVerticalGroup(
@@ -335,19 +494,23 @@ public class FrameSideBar extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(18, 18, 18)
                 .addComponent(bDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(4, 4, 4)
                 .addComponent(bDataMaster, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(subDataMaster, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(subDataTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(subLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bAkunPengguna, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 394, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -382,11 +545,18 @@ public class FrameSideBar extends javax.swing.JFrame {
     private void bTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTransaksiActionPerformed
         // TODO add your handling code here:
         setActiveMenu(bTransaksi);
+        
+        subDataTransaksi.setVisible(!subDataTransaksi.isVisible());
+        sideBar.revalidate();
+        sideBar.repaint();
     }//GEN-LAST:event_bTransaksiActionPerformed
 
     private void bLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporanActionPerformed
         // TODO add your handling code here:
         setActiveMenu(bLaporan);
+        subLaporan.setVisible(!subLaporan.isVisible());
+        sideBar.revalidate();
+        sideBar.repaint();
     }//GEN-LAST:event_bLaporanActionPerformed
 
     private void bAkunPenggunaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAkunPenggunaActionPerformed
@@ -413,6 +583,34 @@ public class FrameSideBar extends javax.swing.JFrame {
     private void bDataMaster1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDataMaster1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bDataMaster1ActionPerformed
+
+    private void bTransaksi1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTransaksi1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bTransaksi1ActionPerformed
+
+    private void bTransaksi2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTransaksi2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bTransaksi2ActionPerformed
+
+    private void bTransaksi3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTransaksi3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bTransaksi3ActionPerformed
+
+    private void bLaporan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporan1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bLaporan1ActionPerformed
+
+    private void bLaporan2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporan2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bLaporan2ActionPerformed
+
+    private void bLaporan3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporan3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bLaporan3ActionPerformed
+
+    private void bLaporan4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporan4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bLaporan4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -475,8 +673,15 @@ public class FrameSideBar extends javax.swing.JFrame {
     private javax.swing.JButton bDataMaster8;
     private javax.swing.JButton bDataMaster9;
     private javax.swing.JButton bLaporan;
+    private javax.swing.JButton bLaporan1;
+    private javax.swing.JButton bLaporan2;
+    private javax.swing.JButton bLaporan3;
+    private javax.swing.JButton bLaporan4;
     private javax.swing.JButton bLogout;
     private javax.swing.JButton bTransaksi;
+    private javax.swing.JButton bTransaksi1;
+    private javax.swing.JButton bTransaksi2;
+    private javax.swing.JButton bTransaksi3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -485,5 +690,7 @@ public class FrameSideBar extends javax.swing.JFrame {
     private javax.swing.JPanel panelUtama;
     private javax.swing.JPanel sideBar;
     private javax.swing.JPanel subDataMaster;
+    private javax.swing.JPanel subDataTransaksi;
+    private javax.swing.JPanel subLaporan;
     // End of variables declaration//GEN-END:variables
 }

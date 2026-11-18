@@ -159,7 +159,7 @@ public class ButtonCustom extends JButton {
         fillOver = new Color(38,17,112);
         fillClick = new Color(28,12,82);
         strokeWidth = 2;
-        roundedCorner =50;
+        roundedCorner =20;
         fill = fillOriginal;
         icon = null;
         

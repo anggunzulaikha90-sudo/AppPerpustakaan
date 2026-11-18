@@ -228,13 +228,14 @@ public class panelDashboard extends javax.swing.JPanel {
         jPanel13.setBackground(new java.awt.Color(243, 246, 250));
         jPanel13.setMinimumSize(new java.awt.Dimension(1024, 152));
         jPanel13.setPreferredSize(new java.awt.Dimension(1024, 152));
-        jPanel13.setLayout(new java.awt.GridLayout(1, 4, 20, 0));
+        jPanel13.setLayout(new java.awt.GridLayout(1, 4, 40, 0));
 
         jPanel14.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel14.setOpaque(false);
         jPanel14.setPreferredSize(new java.awt.Dimension(200, 152));
         jPanel14.setLayout(new java.awt.BorderLayout());
 
+        panelCustom2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(242, 242, 242), 2));
         panelCustom2.setMinimumSize(new java.awt.Dimension(766, 150));
         panelCustom2.setPreferredSize(new java.awt.Dimension(766, 150));
         panelCustom2.setRoundBottomLeft(75);
@@ -298,6 +299,7 @@ public class panelDashboard extends javax.swing.JPanel {
         jPanel16.setPreferredSize(new java.awt.Dimension(200, 152));
         jPanel16.setLayout(new java.awt.BorderLayout());
 
+        panelCustom4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(242, 242, 242), 2));
         panelCustom4.setMinimumSize(new java.awt.Dimension(766, 150));
         panelCustom4.setPreferredSize(new java.awt.Dimension(766, 150));
         panelCustom4.setLayout(new java.awt.BorderLayout());
@@ -356,6 +358,7 @@ public class panelDashboard extends javax.swing.JPanel {
         jPanel18.setPreferredSize(new java.awt.Dimension(200, 152));
         jPanel18.setLayout(new java.awt.BorderLayout());
 
+        panelCustom6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(242, 242, 242), 2));
         panelCustom6.setMinimumSize(new java.awt.Dimension(766, 150));
         panelCustom6.setPreferredSize(new java.awt.Dimension(766, 150));
         panelCustom6.setLayout(new java.awt.BorderLayout());
@@ -413,6 +416,8 @@ public class panelDashboard extends javax.swing.JPanel {
         jPanel20.setPreferredSize(new java.awt.Dimension(200, 152));
         jPanel20.setLayout(new java.awt.BorderLayout());
 
+        panelCustom8.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(242, 242, 242), 2));
         panelCustom8.setMinimumSize(new java.awt.Dimension(766, 150));
         panelCustom8.setPreferredSize(new java.awt.Dimension(766, 150));
         panelCustom8.setLayout(new java.awt.BorderLayout());
