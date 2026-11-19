@@ -55,7 +55,7 @@ public class FrameSideBar extends javax.swing.JFrame {
      void inisiasiPanel(){
         cardLayout = (CardLayout)panelUtama.getLayout();
         panelUtama.add(new panelDashboard(), "dashboard");
-        
+        panelUtama.add(new panelDataMasterSiswa(), "DataMasterSiswa");
     }
 
     /**
@@ -582,6 +582,7 @@ public class FrameSideBar extends javax.swing.JFrame {
 
     private void bDataMaster1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDataMaster1ActionPerformed
         // TODO add your handling code here:
+        cardLayout.show(panelUtama, "DataMasterSiswa");
     }//GEN-LAST:event_bDataMaster1ActionPerformed
 
     private void bTransaksi1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTransaksi1ActionPerformed

@@ -42,10 +42,8 @@ public class FrameLogin extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         panelCustom3 = new custom.PanelCustom();
         tUser = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         panelCustom6 = new custom.PanelCustom();
-        jLabel11 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jCheckBox3 = new javax.swing.JCheckBox();
         jLabel12 = new javax.swing.JLabel();
@@ -54,7 +52,6 @@ public class FrameLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1024, 737));
         setMinimumSize(new java.awt.Dimension(1024, 737));
-        setPreferredSize(new java.awt.Dimension(1024, 737));
 
         jPanel2.setBackground(new java.awt.Color(243, 246, 250));
         jPanel2.setMinimumSize(new java.awt.Dimension(1024, 737));
@@ -94,28 +91,21 @@ public class FrameLogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-person-45.png"))); // NOI18N
-
         javax.swing.GroupLayout panelCustom3Layout = new javax.swing.GroupLayout(panelCustom3);
         panelCustom3.setLayout(panelCustom3Layout);
         panelCustom3Layout.setHorizontalGroup(
             panelCustom3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom3Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tUser, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGap(16, 16, 16)
+                .addComponent(tUser, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelCustom3Layout.setVerticalGroup(
             panelCustom3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tUser)
+                .addComponent(tUser, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(panelCustom3Layout.createSequentialGroup()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
         );
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -128,8 +118,6 @@ public class FrameLogin extends javax.swing.JFrame {
         panelCustom6.setRoundTopLeft(35);
         panelCustom6.setRoundTopRight(35);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-padlock-35.png"))); // NOI18N
-
         jPasswordField1.setBackground(new java.awt.Color(243, 246, 250));
         jPasswordField1.setText("Masukkan Kata Sandi");
         jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
@@ -139,19 +127,15 @@ public class FrameLogin extends javax.swing.JFrame {
         panelCustom6Layout.setHorizontalGroup(
             panelCustom6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom6Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel11)
                 .addGap(18, 18, 18)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         panelCustom6Layout.setVerticalGroup(
             panelCustom6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelCustom6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPasswordField1))
+                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
@@ -267,8 +251,6 @@ public class FrameLogin extends javax.swing.JFrame {
     private custom.ButtonCustom bLogin;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

@@ -136,21 +136,52 @@ public class ButtonCustom extends JButton {
         repaint();
     }
 
+    private Color strokeColor = new Color(255, 255, 255);
+
+    public Color getStrokeColor() {
+        return strokeColor;
+    }
+
+    public void setStrokeColor(Color strokeColor) {
+        this.strokeColor = strokeColor;
+        repaint();
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
-        if(!isOpaque()){
-            Graphics2D g2d = (Graphics2D) g;
-            g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            int s = strokeWidth;
-            int w = getWidth() - (2*s);
-            int h = getHeight() - (2*s);
-            
-            g2d.setColor(fill);
-            g2d.fillRoundRect(s, s, w, h, roundedCorner, roundedCorner);
-            
-        }
-        super.paintComponent(g);
+    Graphics2D g2d = (Graphics2D) g.create();
+    g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+    float s = strokeWidth;
+    // Stroke digambar di tengah garis path, jadi digeser setengah lebar garis
+    // agar tidak terpotong di tepi komponen
+    java.awt.geom.RoundRectangle2D.Float shape = new java.awt.geom.RoundRectangle2D.Float(
+            s / 2f, s / 2f,
+            getWidth() - s, getHeight() - s,
+            roundedCorner, roundedCorner);
+
+    // Isi
+    g2d.setColor(fill);
+    g2d.fill(shape);
+
+    // Garis border mengikuti lengkungan
+    if (strokeWidth > 0 && strokeColor != null) {
+        g2d.setStroke(new java.awt.BasicStroke(s));
+        g2d.setColor(strokeColor);
+        g2d.draw(shape);
     }
+
+    g2d.dispose();
+    super.paintComponent(g);
+}
+    
+    @Override
+    public void setBackground(Color bg) {
+    super.setBackground(bg);
+    if (fillOriginal != null) {   
+        setFillOriginal(bg);
+    }
+}
     
     
     

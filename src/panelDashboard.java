@@ -15,7 +15,7 @@ public class panelDashboard extends javax.swing.JPanel {
     public panelDashboard() {
         initComponents();
     }
-
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,14 +42,20 @@ public class panelDashboard extends javax.swing.JPanel {
         jLabel17 = new javax.swing.JLabel();
         panelCustom12 = new custom.PanelCustom();
         jLabel20 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel13 = new javax.swing.JPanel();
-        jPanel14 = new javax.swing.JPanel();
-        panelCustom2 = new custom.PanelCustom();
-        jPanel15 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        panelCustom3 = new custom.PanelCustom();
-        jLabel3 = new javax.swing.JLabel();
+        panelCustom13 = new custom.PanelCustom();
+        panelCustom16 = new custom.PanelCustom();
+        jLabel18 = new javax.swing.JLabel();
+        panelCustom17 = new custom.PanelCustom();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel24 = new javax.swing.JPanel();
+        jPanel23 = new javax.swing.JPanel();
+        panelCustom14 = new custom.PanelCustom();
+        jPanel22 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        panelCustom15 = new custom.PanelCustom();
+        jLabel22 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         panelCustom4 = new custom.PanelCustom();
@@ -72,9 +78,6 @@ public class panelDashboard extends javax.swing.JPanel {
         panelCustom9 = new custom.PanelCustom();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        tDashboard = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(243, 246, 250));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(243, 246, 250), 30));
@@ -221,66 +224,128 @@ public class panelDashboard extends javax.swing.JPanel {
 
         add(jPanel1, java.awt.BorderLayout.NORTH);
 
-        jPanel3.setMinimumSize(new java.awt.Dimension(1024, 152));
-        jPanel3.setPreferredSize(new java.awt.Dimension(1024, 152));
-        jPanel3.setLayout(new java.awt.CardLayout());
+        panelCustom13.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 0));
+        panelCustom13.setPreferredSize(new java.awt.Dimension(964, 560));
+        panelCustom13.setRoundBottomLeft(30);
+        panelCustom13.setRoundBottomRight(30);
+        panelCustom13.setRoundTopLeft(30);
+        panelCustom13.setRoundTopRight(30);
+        panelCustom13.setLayout(new java.awt.BorderLayout());
 
-        jPanel13.setBackground(new java.awt.Color(243, 246, 250));
-        jPanel13.setMinimumSize(new java.awt.Dimension(1024, 152));
-        jPanel13.setPreferredSize(new java.awt.Dimension(1024, 152));
-        jPanel13.setLayout(new java.awt.GridLayout(1, 4, 40, 0));
+        panelCustom16.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom16.setPreferredSize(new java.awt.Dimension(964, 40));
+        panelCustom16.setRoundTopLeft(30);
+        panelCustom16.setRoundTopRight(30);
 
-        jPanel14.setMinimumSize(new java.awt.Dimension(200, 152));
-        jPanel14.setOpaque(false);
-        jPanel14.setPreferredSize(new java.awt.Dimension(200, 152));
-        jPanel14.setLayout(new java.awt.BorderLayout());
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel18.setText("Peminjaman terbaru");
 
-        panelCustom2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(242, 242, 242), 2));
-        panelCustom2.setMinimumSize(new java.awt.Dimension(766, 150));
-        panelCustom2.setPreferredSize(new java.awt.Dimension(766, 150));
-        panelCustom2.setRoundBottomLeft(75);
-        panelCustom2.setRoundBottomRight(75);
-        panelCustom2.setRoundTopLeft(75);
-        panelCustom2.setRoundTopRight(75);
-        panelCustom2.setLayout(new java.awt.BorderLayout());
+        javax.swing.GroupLayout panelCustom16Layout = new javax.swing.GroupLayout(panelCustom16);
+        panelCustom16.setLayout(panelCustom16Layout);
+        panelCustom16Layout.setHorizontalGroup(
+            panelCustom16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom16Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel18)
+                .addContainerGap(769, Short.MAX_VALUE))
+        );
+        panelCustom16Layout.setVerticalGroup(
+            panelCustom16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom16Layout.createSequentialGroup()
+                .addGap(0, 15, Short.MAX_VALUE)
+                .addComponent(jLabel18))
+        );
 
-        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel15.setPreferredSize(new java.awt.Dimension(1024, 60));
-        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelCustom13.add(panelCustom16, java.awt.BorderLayout.PAGE_START);
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel11.setText("Total Buku");
-        jPanel15.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        panelCustom17.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 20));
+        panelCustom17.setRoundBottomLeft(30);
+        panelCustom17.setRoundBottomRight(30);
+        panelCustom17.setRoundTopLeft(30);
+        panelCustom17.setRoundTopRight(30);
+        panelCustom17.setLayout(new java.awt.CardLayout());
 
-        panelCustom3.setBackground(new java.awt.Color(243, 246, 250));
-        panelCustom3.setRoundBottomLeft(20);
-        panelCustom3.setRoundBottomRight(20);
-        panelCustom3.setRoundTopLeft(20);
-        panelCustom3.setRoundTopRight(20);
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(100, 490));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Moleskine.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
 
-        javax.swing.GroupLayout panelCustom3Layout = new javax.swing.GroupLayout(panelCustom3);
-        panelCustom3.setLayout(panelCustom3Layout);
-        panelCustom3Layout.setHorizontalGroup(
-            panelCustom3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom3Layout.createSequentialGroup()
+        panelCustom17.add(jScrollPane2, "card2");
+
+        panelCustom13.add(panelCustom17, java.awt.BorderLayout.CENTER);
+
+        add(panelCustom13, java.awt.BorderLayout.PAGE_END);
+
+        jPanel11.setLayout(new java.awt.CardLayout());
+
+        jPanel24.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel24.setMinimumSize(new java.awt.Dimension(1024, 152));
+        jPanel24.setPreferredSize(new java.awt.Dimension(1024, 152));
+        jPanel24.setLayout(new java.awt.GridLayout(1, 4, 40, 0));
+
+        jPanel23.setMinimumSize(new java.awt.Dimension(200, 152));
+        jPanel23.setOpaque(false);
+        jPanel23.setPreferredSize(new java.awt.Dimension(200, 152));
+        jPanel23.setLayout(new java.awt.BorderLayout());
+
+        panelCustom14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(242, 242, 242), 2));
+        panelCustom14.setMinimumSize(new java.awt.Dimension(766, 150));
+        panelCustom14.setPreferredSize(new java.awt.Dimension(766, 150));
+        panelCustom14.setRoundBottomLeft(75);
+        panelCustom14.setRoundBottomRight(75);
+        panelCustom14.setRoundTopLeft(75);
+        panelCustom14.setRoundTopRight(75);
+        panelCustom14.setLayout(new java.awt.BorderLayout());
+
+        jPanel22.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel22.setPreferredSize(new java.awt.Dimension(1024, 60));
+        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel21.setText("Total Buku");
+        jPanel22.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+
+        panelCustom15.setBackground(new java.awt.Color(243, 246, 250));
+        panelCustom15.setRoundBottomLeft(20);
+        panelCustom15.setRoundBottomRight(20);
+        panelCustom15.setRoundTopLeft(20);
+        panelCustom15.setRoundTopRight(20);
+
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Moleskine.png"))); // NOI18N
+        jLabel22.setText("jLabel3");
+
+        javax.swing.GroupLayout panelCustom15Layout = new javax.swing.GroupLayout(panelCustom15);
+        panelCustom15.setLayout(panelCustom15Layout);
+        panelCustom15Layout.setHorizontalGroup(
+            panelCustom15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, Short.MAX_VALUE)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 38, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        panelCustom3Layout.setVerticalGroup(
-            panelCustom3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom3Layout.createSequentialGroup()
+        panelCustom15Layout.setVerticalGroup(
+            panelCustom15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3)
+                .addComponent(jLabel22)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel15.add(panelCustom3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 40));
+        jPanel22.add(panelCustom15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 40));
 
-        panelCustom2.add(jPanel15, java.awt.BorderLayout.PAGE_START);
+        panelCustom14.add(jPanel22, java.awt.BorderLayout.PAGE_START);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -288,11 +353,11 @@ public class panelDashboard extends javax.swing.JPanel {
         jLabel4.setText("0");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel4.setOpaque(true);
-        panelCustom2.add(jLabel4, java.awt.BorderLayout.CENTER);
+        panelCustom14.add(jLabel4, java.awt.BorderLayout.CENTER);
 
-        jPanel14.add(panelCustom2, java.awt.BorderLayout.PAGE_START);
+        jPanel23.add(panelCustom14, java.awt.BorderLayout.PAGE_START);
 
-        jPanel13.add(jPanel14);
+        jPanel24.add(jPanel23);
 
         jPanel16.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel16.setOpaque(false);
@@ -351,7 +416,7 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel16.add(panelCustom4, java.awt.BorderLayout.PAGE_START);
 
-        jPanel13.add(jPanel16);
+        jPanel24.add(jPanel16);
 
         jPanel18.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel18.setOpaque(false);
@@ -409,7 +474,7 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel18.add(panelCustom6, java.awt.BorderLayout.PAGE_START);
 
-        jPanel13.add(jPanel18);
+        jPanel24.add(jPanel18);
 
         jPanel20.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel20.setOpaque(false);
@@ -469,33 +534,11 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel20.add(panelCustom8, java.awt.BorderLayout.PAGE_START);
 
-        jPanel13.add(jPanel20);
+        jPanel24.add(jPanel20);
 
-        jPanel3.add(jPanel13, "card2");
+        jPanel11.add(jPanel24, "card2");
 
-        add(jPanel3, java.awt.BorderLayout.CENTER);
-
-        jPanel2.setBackground(new java.awt.Color(243, 246, 250));
-        jPanel2.setMinimumSize(new java.awt.Dimension(1024, 300));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1024, 550));
-        jPanel2.setLayout(new java.awt.BorderLayout());
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        tDashboard.setViewportView(jTable1);
-
-        jPanel2.add(tDashboard, java.awt.BorderLayout.CENTER);
-
-        add(jPanel2, java.awt.BorderLayout.SOUTH);
+        add(jPanel11, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -509,9 +552,12 @@ public class panelDashboard extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -520,6 +566,7 @@ public class panelDashboard extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
@@ -527,20 +574,28 @@ public class panelDashboard extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
     private custom.PanelCustom panelCustom1;
     private custom.PanelCustom panelCustom10;
     private custom.PanelCustom panelCustom11;
     private custom.PanelCustom panelCustom12;
+    private custom.PanelCustom panelCustom13;
+    private custom.PanelCustom panelCustom14;
+    private custom.PanelCustom panelCustom15;
+    private custom.PanelCustom panelCustom16;
+    private custom.PanelCustom panelCustom17;
     private custom.PanelCustom panelCustom2;
     private custom.PanelCustom panelCustom3;
     private custom.PanelCustom panelCustom4;
@@ -549,6 +604,5 @@ public class panelDashboard extends javax.swing.JPanel {
     private custom.PanelCustom panelCustom7;
     private custom.PanelCustom panelCustom8;
     private custom.PanelCustom panelCustom9;
-    private javax.swing.JScrollPane tDashboard;
     // End of variables declaration//GEN-END:variables
 }
