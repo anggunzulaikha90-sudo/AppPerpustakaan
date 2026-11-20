@@ -25,37 +25,204 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelCustom6 = new custom.PanelCustom();
+        panelCustom2 = new custom.PanelCustom();
+        jLabel1 = new javax.swing.JLabel();
+        panelCustom5 = new custom.PanelCustom();
+        buttonCustom1 = new custom.ButtonCustom();
+        buttonCustom2 = new custom.ButtonCustom();
+        panelCustom7 = new custom.PanelCustom();
+        jLabel2 = new javax.swing.JLabel();
+        panelCustom9 = new custom.PanelCustom();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        panelCustom10 = new custom.PanelCustom();
+        jComboBox2 = new javax.swing.JComboBox<>();
         panelCustom1 = new custom.PanelCustom();
         panelCustom3 = new custom.PanelCustom();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        panelCustom11 = new custom.PanelCustom();
         panelCustom8 = new custom.PanelCustom();
-        jTextField2 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         panelCustom4 = new custom.PanelCustom();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        panelCustom2 = new custom.PanelCustom();
-        panelCustom9 = new custom.PanelCustom();
-        jLabel2 = new javax.swing.JLabel();
-        panelCustom10 = new custom.PanelCustom();
-        buttonCustom1 = new custom.ButtonCustom();
-        buttonCustom2 = new custom.ButtonCustom();
-        panelCustom5 = new custom.PanelCustom();
-        jLabel3 = new javax.swing.JLabel();
-        panelCustom7 = new custom.PanelCustom();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        panelCustom11 = new custom.PanelCustom();
-        jComboBox2 = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(243, 246, 250));
         setMinimumSize(new java.awt.Dimension(964, 400));
         setPreferredSize(new java.awt.Dimension(964, 400));
         setLayout(new java.awt.BorderLayout(20, 0));
 
-        panelCustom1.setBackground(new java.awt.Color(255, 255, 255));
-        panelCustom1.setMinimumSize(new java.awt.Dimension(580, 400));
-        panelCustom1.setPreferredSize(new java.awt.Dimension(600, 400));
+        panelCustom6.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom6.setPreferredSize(new java.awt.Dimension(300, 400));
+        panelCustom6.setRoundBottomLeft(30);
+        panelCustom6.setRoundBottomRight(30);
+        panelCustom6.setRoundTopLeft(30);
+        panelCustom6.setRoundTopRight(30);
+        panelCustom6.setStrokeColor(new java.awt.Color(204, 204, 204));
+        panelCustom6.setStrokeWidth(2);
+        panelCustom6.setLayout(new java.awt.BorderLayout());
+
+        panelCustom2.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom2.setPreferredSize(new java.awt.Dimension(300, 40));
+        panelCustom2.setRoundTopLeft(30);
+        panelCustom2.setRoundTopRight(30);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
+        jLabel1.setText("Pengaturan Naik Kelas");
+
+        javax.swing.GroupLayout panelCustom2Layout = new javax.swing.GroupLayout(panelCustom2);
+        panelCustom2.setLayout(panelCustom2Layout);
+        panelCustom2Layout.setHorizontalGroup(
+            panelCustom2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom2Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel1)
+                .addContainerGap(106, Short.MAX_VALUE))
+        );
+        panelCustom2Layout.setVerticalGroup(
+            panelCustom2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom2Layout.createSequentialGroup()
+                .addContainerGap(10, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
+        );
+
+        panelCustom6.add(panelCustom2, java.awt.BorderLayout.PAGE_START);
+
+        panelCustom5.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom5.setPreferredSize(new java.awt.Dimension(300, 170));
+        panelCustom5.setRoundBottomLeft(30);
+        panelCustom5.setRoundBottomRight(30);
+
+        buttonCustom1.setBackground(new java.awt.Color(255, 255, 255));
+        buttonCustom1.setForeground(new java.awt.Color(0, 0, 0));
+        buttonCustom1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-close-25.png"))); // NOI18N
+        buttonCustom1.setText("Batal");
+        buttonCustom1.setStrokeColor(new java.awt.Color(47, 22, 138));
+
+        buttonCustom2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Scroll Up (1).png"))); // NOI18N
+        buttonCustom2.setText("Naik Kelas");
+        buttonCustom2.setStrokeColor(new java.awt.Color(47, 22, 138));
+
+        javax.swing.GroupLayout panelCustom5Layout = new javax.swing.GroupLayout(panelCustom5);
+        panelCustom5.setLayout(panelCustom5Layout);
+        panelCustom5Layout.setHorizontalGroup(
+            panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom5Layout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(buttonCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+        );
+        panelCustom5Layout.setVerticalGroup(
+            panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom5Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
+
+        panelCustom6.add(panelCustom5, java.awt.BorderLayout.PAGE_END);
+
+        panelCustom7.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom7.setPreferredSize(new java.awt.Dimension(300, 230));
+
+        jLabel2.setText("Kelas Asal");
+
+        panelCustom9.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom9.setRoundBottomLeft(20);
+        panelCustom9.setRoundBottomRight(20);
+        panelCustom9.setRoundTopLeft(20);
+        panelCustom9.setRoundTopRight(20);
+        panelCustom9.setStrokeColor(new java.awt.Color(204, 204, 204));
+        panelCustom9.setStrokeWidth(1);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+
+        javax.swing.GroupLayout panelCustom9Layout = new javax.swing.GroupLayout(panelCustom9);
+        panelCustom9.setLayout(panelCustom9Layout);
+        panelCustom9Layout.setHorizontalGroup(
+            panelCustom9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jComboBox1, 0, 254, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelCustom9Layout.setVerticalGroup(
+            panelCustom9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jComboBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jLabel4.setText("Kelas Tujuan");
+
+        panelCustom10.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom10.setRoundBottomLeft(20);
+        panelCustom10.setRoundBottomRight(20);
+        panelCustom10.setRoundTopLeft(20);
+        panelCustom10.setRoundTopRight(20);
+        panelCustom10.setStrokeColor(new java.awt.Color(204, 204, 204));
+        panelCustom10.setStrokeWidth(1);
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+
+        javax.swing.GroupLayout panelCustom10Layout = new javax.swing.GroupLayout(panelCustom10);
+        panelCustom10.setLayout(panelCustom10Layout);
+        panelCustom10Layout.setHorizontalGroup(
+            panelCustom10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jComboBox2, 0, 254, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelCustom10Layout.setVerticalGroup(
+            panelCustom10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jComboBox2, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout panelCustom7Layout = new javax.swing.GroupLayout(panelCustom7);
+        panelCustom7.setLayout(panelCustom7Layout);
+        panelCustom7Layout.setHorizontalGroup(
+            panelCustom7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom7Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(panelCustom7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(panelCustom10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(panelCustom9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        panelCustom7Layout.setVerticalGroup(
+            panelCustom7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom7Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(panelCustom9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(panelCustom10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        panelCustom6.add(panelCustom7, java.awt.BorderLayout.CENTER);
+
+        add(panelCustom6, java.awt.BorderLayout.LINE_START);
+
         panelCustom1.setRoundBottomLeft(30);
         panelCustom1.setRoundBottomRight(30);
         panelCustom1.setRoundTopLeft(30);
@@ -69,13 +236,17 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
         panelCustom3.setRoundTopRight(30);
         panelCustom3.setLayout(new java.awt.BorderLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("    Cari siswa");
-        jLabel1.setPreferredSize(new java.awt.Dimension(83, 40));
-        panelCustom3.add(jLabel1, java.awt.BorderLayout.PAGE_START);
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setText("    Cari siswa");
+        jLabel3.setPreferredSize(new java.awt.Dimension(83, 40));
+        panelCustom3.add(jLabel3, java.awt.BorderLayout.PAGE_START);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(580, 70));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(580, 70));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        panelCustom11.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom11.setPreferredSize(new java.awt.Dimension(580, 70));
 
         panelCustom8.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom8.setRoundBottomLeft(20);
@@ -85,46 +256,49 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
         panelCustom8.setStrokeColor(new java.awt.Color(204, 204, 204));
         panelCustom8.setStrokeWidth(1);
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField2.setText("Nama atau ID siswa");
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(153, 153, 153));
+        jTextField1.setText("Nama atau ID siswa");
+        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        jTextField1.addActionListener(this::jTextField1ActionPerformed);
 
         javax.swing.GroupLayout panelCustom8Layout = new javax.swing.GroupLayout(panelCustom8);
         panelCustom8.setLayout(panelCustom8Layout);
         panelCustom8Layout.setHorizontalGroup(
             panelCustom8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom8Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         panelCustom8Layout.setVerticalGroup(
             panelCustom8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
+        javax.swing.GroupLayout panelCustom11Layout = new javax.swing.GroupLayout(panelCustom11);
+        panelCustom11.setLayout(panelCustom11Layout);
+        panelCustom11Layout.setHorizontalGroup(
+            panelCustom11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom11Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
                 .addComponent(panelCustom8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(16, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
+        panelCustom11Layout.setVerticalGroup(
+            panelCustom11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCustom11Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addComponent(panelCustom8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        panelCustom3.add(jPanel1, java.awt.BorderLayout.CENTER);
+        jPanel2.add(panelCustom11, java.awt.BorderLayout.PAGE_START);
+
+        panelCustom3.add(jPanel2, java.awt.BorderLayout.CENTER);
 
         panelCustom1.add(panelCustom3, java.awt.BorderLayout.PAGE_START);
 
@@ -155,183 +329,12 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
 
         panelCustom1.add(panelCustom4, java.awt.BorderLayout.CENTER);
 
-        add(panelCustom1, java.awt.BorderLayout.LINE_START);
-
-        panelCustom2.setBackground(new java.awt.Color(255, 255, 255));
-        panelCustom2.setMinimumSize(new java.awt.Dimension(470, 400));
-        panelCustom2.setPreferredSize(new java.awt.Dimension(300, 400));
-        panelCustom2.setRoundBottomLeft(30);
-        panelCustom2.setRoundBottomRight(30);
-        panelCustom2.setRoundTopLeft(30);
-        panelCustom2.setRoundTopRight(30);
-        panelCustom2.setLayout(new java.awt.BorderLayout());
-
-        panelCustom9.setBackground(new java.awt.Color(255, 255, 255));
-        panelCustom9.setPreferredSize(new java.awt.Dimension(354, 40));
-        panelCustom9.setRoundTopLeft(30);
-        panelCustom9.setRoundTopRight(30);
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Pengaturan Naik Kelas");
-
-        javax.swing.GroupLayout panelCustom9Layout = new javax.swing.GroupLayout(panelCustom9);
-        panelCustom9.setLayout(panelCustom9Layout);
-        panelCustom9Layout.setHorizontalGroup(
-            panelCustom9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom9Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel2)
-                .addContainerGap(135, Short.MAX_VALUE))
-        );
-        panelCustom9Layout.setVerticalGroup(
-            panelCustom9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
-
-        panelCustom2.add(panelCustom9, java.awt.BorderLayout.PAGE_START);
-
-        panelCustom10.setBackground(new java.awt.Color(255, 255, 255));
-        panelCustom10.setPreferredSize(new java.awt.Dimension(354, 130));
-        panelCustom10.setRoundBottomLeft(30);
-        panelCustom10.setRoundBottomRight(30);
-
-        buttonCustom1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Scroll Up (1).png"))); // NOI18N
-        buttonCustom1.setText("Naik Kelas");
-        buttonCustom1.setStrokeColor(new java.awt.Color(47, 22, 138));
-        buttonCustom1.setStrokeWidth(1);
-
-        buttonCustom2.setBackground(new java.awt.Color(255, 255, 255));
-        buttonCustom2.setForeground(new java.awt.Color(0, 0, 0));
-        buttonCustom2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Close.png"))); // NOI18N
-        buttonCustom2.setText("Batal");
-        buttonCustom2.setStrokeColor(new java.awt.Color(47, 22, 138));
-        buttonCustom2.setStrokeWidth(1);
-        buttonCustom2.addActionListener(this::buttonCustom2ActionPerformed);
-
-        javax.swing.GroupLayout panelCustom10Layout = new javax.swing.GroupLayout(panelCustom10);
-        panelCustom10.setLayout(panelCustom10Layout);
-        panelCustom10Layout.setHorizontalGroup(
-            panelCustom10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom10Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
-                .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(buttonCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39))
-        );
-        panelCustom10Layout.setVerticalGroup(
-            panelCustom10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom10Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(panelCustom10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(76, Short.MAX_VALUE))
-        );
-
-        panelCustom2.add(panelCustom10, java.awt.BorderLayout.PAGE_END);
-
-        panelCustom5.setBackground(new java.awt.Color(255, 255, 255));
-        panelCustom5.setPreferredSize(new java.awt.Dimension(364, 220));
-
-        jLabel3.setText("Kelas Asal");
-
-        panelCustom7.setBackground(new java.awt.Color(255, 255, 255));
-        panelCustom7.setRoundBottomLeft(20);
-        panelCustom7.setRoundBottomRight(20);
-        panelCustom7.setRoundTopLeft(20);
-        panelCustom7.setRoundTopRight(20);
-        panelCustom7.setStrokeColor(new java.awt.Color(204, 204, 204));
-        panelCustom7.setStrokeWidth(1);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
-
-        javax.swing.GroupLayout panelCustom7Layout = new javax.swing.GroupLayout(panelCustom7);
-        panelCustom7.setLayout(panelCustom7Layout);
-        panelCustom7Layout.setHorizontalGroup(
-            panelCustom7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jComboBox1, 0, 312, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        panelCustom7Layout.setVerticalGroup(
-            panelCustom7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jComboBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jLabel4.setText("Kelas Tujuan");
-
-        panelCustom11.setBackground(new java.awt.Color(255, 255, 255));
-        panelCustom11.setRoundBottomLeft(20);
-        panelCustom11.setRoundBottomRight(20);
-        panelCustom11.setRoundTopLeft(20);
-        panelCustom11.setRoundTopRight(20);
-        panelCustom11.setStrokeColor(new java.awt.Color(204, 204, 204));
-        panelCustom11.setStrokeWidth(1);
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
-
-        javax.swing.GroupLayout panelCustom11Layout = new javax.swing.GroupLayout(panelCustom11);
-        panelCustom11.setLayout(panelCustom11Layout);
-        panelCustom11Layout.setHorizontalGroup(
-            panelCustom11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jComboBox2, 0, 312, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        panelCustom11Layout.setVerticalGroup(
-            panelCustom11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jComboBox2, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout panelCustom5Layout = new javax.swing.GroupLayout(panelCustom5);
-        panelCustom5.setLayout(panelCustom5Layout);
-        panelCustom5Layout.setHorizontalGroup(
-            panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom5Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(panelCustom11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(panelCustom7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panelCustom5Layout.setVerticalGroup(
-            panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom5Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelCustom7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelCustom11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(74, Short.MAX_VALUE))
-        );
-
-        panelCustom2.add(panelCustom5, java.awt.BorderLayout.CENTER);
-
-        add(panelCustom2, java.awt.BorderLayout.CENTER);
+        add(panelCustom1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonCustom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCustom2ActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonCustom2ActionPerformed
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -343,11 +346,10 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private custom.PanelCustom panelCustom1;
     private custom.PanelCustom panelCustom10;
     private custom.PanelCustom panelCustom11;
