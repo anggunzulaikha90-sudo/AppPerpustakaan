@@ -157,7 +157,7 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
         buttonCustom3.addActionListener(this::buttonCustom3ActionPerformed);
 
         buttonCustom2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus Math.png"))); // NOI18N
-        buttonCustom2.setText("Tambah");
+        buttonCustom2.setText("Tambah Siswa");
         buttonCustom2.setStrokeColor(new java.awt.Color(47, 22, 138));
         buttonCustom2.addActionListener(this::buttonCustom2ActionPerformed);
 
