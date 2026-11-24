@@ -38,24 +38,24 @@ public class FrameMain extends javax.swing.JFrame {
         
     }
     
+   
     void setActiveMenu(JButton active) {
     JButton[] menu = {bDashboard, bDataMaster, bTransaksi, bLaporan, bAkunPengguna, bLogout};
 
-    java.awt.Color ungu = new java.awt.Color(0x2F168A);
-    java.awt.Color unguAktif = new java.awt.Color(0x4A2FA8);
-    java.awt.Color teksRedup = new java.awt.Color(0xC1B9DC);
+    java.awt.Color navy      = new java.awt.Color(64, 82, 127);
+    java.awt.Color coral     = new java.awt.Color(232, 180, 172);
+    java.awt.Color teksAktif = new java.awt.Color(74, 34, 32);
+    java.awt.Color teksRedup = new java.awt.Color(207, 212, 223);
+
     for (JButton b : menu) {
         boolean aktif = (b == active);
-        b.setContentAreaFilled(true);
-        b.setOpaque(true);
-        b.setBorderPainted(false);
-        b.setFocusPainted(false);
         
-        b.setBackground(aktif ? unguAktif : ungu);
-        b.setForeground(aktif ? java.awt.Color.WHITE : teksRedup);
-    
+        b.setBackground(aktif ? coral : navy);
+        b.setForeground(aktif ? teksAktif : teksRedup);
+        b.repaint();
     }
 }
+
     
      void inisiasiPanel(){
         cardLayout = (CardLayout)panelUtama.getLayout();
@@ -79,10 +79,13 @@ public class FrameMain extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        bLogout = new custom.ButtonCustom();
         jPanel3 = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
-        bDashboard = new javax.swing.JButton();
+        bDashboard = new custom.ButtonCustom();
         bDataMaster = new javax.swing.JButton();
         subDataMaster = new javax.swing.JPanel();
         bDataMaster1 = new javax.swing.JButton();
@@ -103,19 +106,16 @@ public class FrameMain extends javax.swing.JFrame {
         bLaporan4 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         bAkunPengguna = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
-        bLogout = new custom.ButtonCustom();
         panelUtama = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 737));
 
-        sideBar.setBackground(new java.awt.Color(47, 22, 138));
+        sideBar.setBackground(new java.awt.Color(64, 82, 127));
         sideBar.setPreferredSize(new java.awt.Dimension(256, 720));
         sideBar.setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setBackground(new java.awt.Color(47, 22, 138));
+        jPanel1.setBackground(new java.awt.Color(64, 82, 127));
         jPanel1.setPreferredSize(new java.awt.Dimension(256, 100));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo sd cangkringan (1).png"))); // NOI18N
@@ -139,9 +139,7 @@ public class FrameMain extends javax.swing.JFrame {
                 .addGap(110, 110, 110)
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(56, 56, 56))
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,8 +155,43 @@ public class FrameMain extends javax.swing.JFrame {
 
         sideBar.add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBackground(new java.awt.Color(47, 22, 138));
-        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(47, 22, 138), 20, true));
+        jPanel2.setBackground(new java.awt.Color(64, 82, 127));
+        jPanel2.setPreferredSize(new java.awt.Dimension(227, 80));
+
+        jSeparator1.setBackground(new java.awt.Color(64, 82, 127));
+        jSeparator1.setPreferredSize(new java.awt.Dimension(222, 10));
+
+        bLogout.setBackground(new java.awt.Color(64, 82, 127));
+        bLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logout PUTIH.png"))); // NOI18N
+        bLogout.setText("Logout");
+        bLogout.setStrokeWidth(0);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        sideBar.add(jPanel2, java.awt.BorderLayout.PAGE_END);
+
+        jPanel3.setBackground(new java.awt.Color(64, 82, 127));
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(64, 82, 127), 4, true));
+        jPanel3.setPreferredSize(new java.awt.Dimension(2542, 220));
 
         jSeparator2.setPreferredSize(new java.awt.Dimension(222, 10));
         jPanel3.add(jSeparator2);
@@ -169,24 +202,17 @@ public class FrameMain extends javax.swing.JFrame {
         jLabel3.setPreferredSize(new java.awt.Dimension(222, 20));
         jPanel3.add(jLabel3);
 
-        bDashboard.setBackground(new java.awt.Color(47, 22, 138));
-        bDashboard.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bDashboard.setForeground(new java.awt.Color(255, 255, 255));
+        bDashboard.setBackground(new java.awt.Color(64, 82, 127));
         bDashboard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Dashboard putih.png"))); // NOI18N
         bDashboard.setText("Dashboard");
-        bDashboard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
-        bDashboard.setBorderPainted(false);
+        bDashboard.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bDashboard.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        bDashboard.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        bDashboard.setIconTextGap(15);
-        bDashboard.setMargin(new java.awt.Insets(2, 30, 3, 14));
-        bDashboard.setOpaque(true);
         bDashboard.setPreferredSize(new java.awt.Dimension(222, 36));
-        bDashboard.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Dashboard ungu.png"))); // NOI18N
+        bDashboard.setStrokeWidth(0);
         bDashboard.addActionListener(this::bDashboardActionPerformed);
         jPanel3.add(bDashboard);
 
-        bDataMaster.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster.setBackground(new java.awt.Color(64, 82, 127));
         bDataMaster.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bDataMaster.setForeground(new java.awt.Color(255, 255, 255));
         bDataMaster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
@@ -202,10 +228,10 @@ public class FrameMain extends javax.swing.JFrame {
         bDataMaster.addActionListener(this::bDataMasterActionPerformed);
         jPanel3.add(bDataMaster);
 
-        subDataMaster.setBackground(new java.awt.Color(47, 22, 138));
+        subDataMaster.setBackground(new java.awt.Color(64, 82, 127));
         subDataMaster.setPreferredSize(new java.awt.Dimension(222, 190));
 
-        bDataMaster1.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster1.setBackground(new java.awt.Color(64, 82, 127));
         bDataMaster1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bDataMaster1.setForeground(new java.awt.Color(255, 255, 255));
         bDataMaster1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
@@ -219,7 +245,7 @@ public class FrameMain extends javax.swing.JFrame {
         bDataMaster1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
         bDataMaster1.addActionListener(this::bDataMaster1ActionPerformed);
 
-        bDataMaster6.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster6.setBackground(new java.awt.Color(64, 82, 127));
         bDataMaster6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bDataMaster6.setForeground(new java.awt.Color(255, 255, 255));
         bDataMaster6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
@@ -233,7 +259,7 @@ public class FrameMain extends javax.swing.JFrame {
         bDataMaster6.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
         bDataMaster6.addActionListener(this::bDataMaster6ActionPerformed);
 
-        bDataMaster7.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster7.setBackground(new java.awt.Color(64, 82, 127));
         bDataMaster7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bDataMaster7.setForeground(new java.awt.Color(255, 255, 255));
         bDataMaster7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
@@ -246,7 +272,7 @@ public class FrameMain extends javax.swing.JFrame {
         bDataMaster7.setOpaque(true);
         bDataMaster7.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
 
-        bDataMaster8.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster8.setBackground(new java.awt.Color(64, 82, 127));
         bDataMaster8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bDataMaster8.setForeground(new java.awt.Color(255, 255, 255));
         bDataMaster8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
@@ -259,7 +285,7 @@ public class FrameMain extends javax.swing.JFrame {
         bDataMaster8.setOpaque(true);
         bDataMaster8.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database ungu.png"))); // NOI18N
 
-        bDataMaster9.setBackground(new java.awt.Color(47, 22, 138));
+        bDataMaster9.setBackground(new java.awt.Color(64, 82, 127));
         bDataMaster9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bDataMaster9.setForeground(new java.awt.Color(255, 255, 255));
         bDataMaster9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Database Putih.png"))); // NOI18N
@@ -305,7 +331,7 @@ public class FrameMain extends javax.swing.JFrame {
 
         jPanel3.add(subDataMaster);
 
-        bTransaksi.setBackground(new java.awt.Color(47, 22, 138));
+        bTransaksi.setBackground(new java.awt.Color(64, 82, 127));
         bTransaksi.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bTransaksi.setForeground(new java.awt.Color(255, 255, 255));
         bTransaksi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
@@ -321,10 +347,10 @@ public class FrameMain extends javax.swing.JFrame {
         bTransaksi.addActionListener(this::bTransaksiActionPerformed);
         jPanel3.add(bTransaksi);
 
-        subDataTransaksi.setBackground(new java.awt.Color(47, 22, 138));
+        subDataTransaksi.setBackground(new java.awt.Color(64, 82, 127));
         subDataTransaksi.setPreferredSize(new java.awt.Dimension(222, 110));
 
-        bTransaksi1.setBackground(new java.awt.Color(47, 22, 138));
+        bTransaksi1.setBackground(new java.awt.Color(64, 82, 127));
         bTransaksi1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bTransaksi1.setForeground(new java.awt.Color(255, 255, 255));
         bTransaksi1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
@@ -338,7 +364,7 @@ public class FrameMain extends javax.swing.JFrame {
         bTransaksi1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi ungu kecil.png"))); // NOI18N
         bTransaksi1.addActionListener(this::bTransaksi1ActionPerformed);
 
-        bTransaksi2.setBackground(new java.awt.Color(47, 22, 138));
+        bTransaksi2.setBackground(new java.awt.Color(64, 82, 127));
         bTransaksi2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bTransaksi2.setForeground(new java.awt.Color(255, 255, 255));
         bTransaksi2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
@@ -352,7 +378,7 @@ public class FrameMain extends javax.swing.JFrame {
         bTransaksi2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi ungu kecil.png"))); // NOI18N
         bTransaksi2.addActionListener(this::bTransaksi2ActionPerformed);
 
-        bTransaksi3.setBackground(new java.awt.Color(47, 22, 138));
+        bTransaksi3.setBackground(new java.awt.Color(64, 82, 127));
         bTransaksi3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bTransaksi3.setForeground(new java.awt.Color(255, 255, 255));
         bTransaksi3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi putih kecil.png"))); // NOI18N
@@ -389,7 +415,7 @@ public class FrameMain extends javax.swing.JFrame {
 
         jPanel3.add(subDataTransaksi);
 
-        bLaporan.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan.setBackground(new java.awt.Color(64, 82, 127));
         bLaporan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bLaporan.setForeground(new java.awt.Color(255, 255, 255));
         bLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
@@ -405,10 +431,10 @@ public class FrameMain extends javax.swing.JFrame {
         bLaporan.addActionListener(this::bLaporanActionPerformed);
         jPanel3.add(bLaporan);
 
-        subLaporan.setBackground(new java.awt.Color(47, 22, 138));
+        subLaporan.setBackground(new java.awt.Color(64, 82, 127));
         subLaporan.setPreferredSize(new java.awt.Dimension(222, 152));
 
-        bLaporan1.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan1.setBackground(new java.awt.Color(64, 82, 127));
         bLaporan1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bLaporan1.setForeground(new java.awt.Color(255, 255, 255));
         bLaporan1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
@@ -422,7 +448,7 @@ public class FrameMain extends javax.swing.JFrame {
         bLaporan1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
         bLaporan1.addActionListener(this::bLaporan1ActionPerformed);
 
-        bLaporan2.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan2.setBackground(new java.awt.Color(64, 82, 127));
         bLaporan2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bLaporan2.setForeground(new java.awt.Color(255, 255, 255));
         bLaporan2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
@@ -436,7 +462,7 @@ public class FrameMain extends javax.swing.JFrame {
         bLaporan2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
         bLaporan2.addActionListener(this::bLaporan2ActionPerformed);
 
-        bLaporan3.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan3.setBackground(new java.awt.Color(64, 82, 127));
         bLaporan3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bLaporan3.setForeground(new java.awt.Color(255, 255, 255));
         bLaporan3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
@@ -450,7 +476,7 @@ public class FrameMain extends javax.swing.JFrame {
         bLaporan3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan ungu kecil.png"))); // NOI18N
         bLaporan3.addActionListener(this::bLaporan3ActionPerformed);
 
-        bLaporan4.setBackground(new java.awt.Color(47, 22, 138));
+        bLaporan4.setBackground(new java.awt.Color(64, 82, 127));
         bLaporan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bLaporan4.setForeground(new java.awt.Color(255, 255, 255));
         bLaporan4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan putih kecil.png"))); // NOI18N
@@ -496,7 +522,7 @@ public class FrameMain extends javax.swing.JFrame {
         jLabel5.setPreferredSize(new java.awt.Dimension(222, 16));
         jPanel3.add(jLabel5);
 
-        bAkunPengguna.setBackground(new java.awt.Color(47, 22, 138));
+        bAkunPengguna.setBackground(new java.awt.Color(64, 82, 127));
         bAkunPengguna.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bAkunPengguna.setForeground(new java.awt.Color(255, 255, 255));
         bAkunPengguna.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person putih.png"))); // NOI18N
@@ -512,34 +538,6 @@ public class FrameMain extends javax.swing.JFrame {
         bAkunPengguna.addActionListener(this::bAkunPenggunaActionPerformed);
         jPanel3.add(bAkunPengguna);
 
-        jPanel2.setBackground(new java.awt.Color(47, 22, 138));
-
-        jSeparator1.setPreferredSize(new java.awt.Dimension(222, 10));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel3.add(jPanel2);
-
-        bLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logout PUTIH.png"))); // NOI18N
-        bLogout.setText("Logout");
-        bLogout.setPreferredSize(new java.awt.Dimension(222, 27));
-        bLogout.setStrokeWidth(0);
-        bLogout.addActionListener(this::bLogoutActionPerformed);
-        jPanel3.add(bLogout);
-
         sideBar.add(jPanel3, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(sideBar, java.awt.BorderLayout.LINE_START);
@@ -551,10 +549,6 @@ public class FrameMain extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void bLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogoutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bLogoutActionPerformed
 
     private void bDataMasterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDataMasterActionPerformed
         // TODO add your handling code here:
@@ -656,31 +650,34 @@ public class FrameMain extends javax.swing.JFrame {
         java.awt.Color ungu = new java.awt.Color(0x2F168A);
         
         
+        java.awt.Color navy = new java.awt.Color(64, 82, 127);
+
         UIManager.put("Button.arc", 26);
         UIManager.put("Button.selectedBackground", java.awt.Color.WHITE);
-        UIManager.put("Button.selectedForeground", ungu);
-        
+        UIManager.put("Button.selectedForeground", navy);
+
         // Desain JOptionPane
-        java.awt.Color abu  = new java.awt.Color(0xC8CCD6);
+        java.awt.Color abu = new java.awt.Color(201, 209, 220);
         UIManager.put("OptionPane.background", java.awt.Color.WHITE);
-        UIManager.put("Panel.background", java.awt.Color.WHITE);              
-        UIManager.put("OptionPane.messageForeground", new java.awt.Color(0x1E1B4B));
+        UIManager.put("Panel.background", java.awt.Color.WHITE);
+        UIManager.put("OptionPane.messageForeground", new java.awt.Color(31, 41, 51));
         UIManager.put("OptionPane.border", javax.swing.BorderFactory.createCompoundBorder(
-            javax.swing.BorderFactory.createLineBorder(abu, 1),          
+            javax.swing.BorderFactory.createLineBorder(abu, 1),
             javax.swing.BorderFactory.createEmptyBorder(16, 20, 16, 20)));
-        // Desain tombol biasa 
+
+        // Desain tombol biasa
         UIManager.put("Button.background", java.awt.Color.WHITE);
-        UIManager.put("Button.foreground", ungu);
-        UIManager.put("Button.hoverBackground", new java.awt.Color(0xEEEAFB));
-        UIManager.put("Button.pressedBackground", new java.awt.Color(0xDDD6F5));
+        UIManager.put("Button.foreground", navy);
+        UIManager.put("Button.hoverBackground", new java.awt.Color(222, 229, 243));
+        UIManager.put("Button.pressedBackground", new java.awt.Color(200, 210, 232));
         UIManager.put("Button.borderColor", abu);
-        // Desain tombol default 
-        UIManager.put("Button.default.background", ungu);
+
+        // Desain tombol default
+        UIManager.put("Button.default.background", navy);
         UIManager.put("Button.default.foreground", java.awt.Color.WHITE);
-        UIManager.put("Button.default.hoverBackground", new java.awt.Color(0x3D22A8));
-        UIManager.put("Button.default.pressedBackground", new java.awt.Color(0x1C0C52));
-        UIManager.put("Button.default.focusedBackground", ungu);
-        UIManager.put("Button.default.foreground", java.awt.Color.WHITE);
+        UIManager.put("Button.default.hoverBackground", new java.awt.Color(78, 98, 148));
+        UIManager.put("Button.default.pressedBackground", new java.awt.Color(48, 62, 98));
+        UIManager.put("Button.default.focusedBackground", navy);
         
         
         java.awt.EventQueue.invokeLater(() -> new FrameMain().setVisible(true));
@@ -688,7 +685,7 @@ public class FrameMain extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAkunPengguna;
-    private javax.swing.JButton bDashboard;
+    private custom.ButtonCustom bDashboard;
     private javax.swing.JButton bDataMaster;
     private javax.swing.JButton bDataMaster1;
     private javax.swing.JButton bDataMaster6;
