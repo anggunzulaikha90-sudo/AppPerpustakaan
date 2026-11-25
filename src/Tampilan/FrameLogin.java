@@ -49,13 +49,14 @@ public class FrameLogin extends javax.swing.JFrame {
         panelCustom6 = new custom.PanelCustom();
         jPasswordField1 = new javax.swing.JPasswordField();
         jCheckBox3 = new javax.swing.JCheckBox();
-        bLogin = new custom.ButtonCustom();
+        buttonCustom1 = new custom.ButtonCustom();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1024, 737));
         setMinimumSize(new java.awt.Dimension(1024, 737));
 
-        jPanel2.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel2.setBackground(new java.awt.Color(221, 240, 251));
         jPanel2.setMinimumSize(new java.awt.Dimension(1024, 737));
         jPanel2.setPreferredSize(new java.awt.Dimension(1024, 737));
         jPanel2.setLayout(new java.awt.GridBagLayout());
@@ -63,28 +64,26 @@ public class FrameLogin extends javax.swing.JFrame {
         panelShadow2.setBackground(new java.awt.Color(255, 255, 255));
         panelShadow2.setPreferredSize(new java.awt.Dimension(555, 580));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo sd cangkringan (2).png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon-48.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Sistem Informasi Perpustakaan");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("SD Negeri Cangkringan");
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel4.setText("Perpustakaan");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(51, 51, 51));
         jLabel8.setText("Username");
 
-        panelCustom3.setBackground(new java.awt.Color(243, 246, 250));
+        panelCustom3.setBackground(new java.awt.Color(255, 233, 168));
         panelCustom3.setRoundBottomLeft(35);
         panelCustom3.setRoundBottomRight(35);
         panelCustom3.setRoundTopLeft(35);
         panelCustom3.setRoundTopRight(35);
 
         tUser.setEditable(false);
-        tUser.setBackground(new java.awt.Color(243, 246, 250));
+        tUser.setBackground(new java.awt.Color(255, 233, 168));
         tUser.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        tUser.setForeground(new java.awt.Color(102, 102, 102));
         tUser.setText("Masukkan nama pengguna");
         tUser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
         tUser.addActionListener(new java.awt.event.ActionListener() {
@@ -114,15 +113,20 @@ public class FrameLogin extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setText("Password");
 
-        panelCustom6.setBackground(new java.awt.Color(243, 246, 250));
+        panelCustom6.setBackground(new java.awt.Color(255, 233, 168));
         panelCustom6.setRoundBottomLeft(35);
         panelCustom6.setRoundBottomRight(35);
         panelCustom6.setRoundTopLeft(35);
         panelCustom6.setRoundTopRight(35);
 
-        jPasswordField1.setBackground(new java.awt.Color(243, 246, 250));
+        jPasswordField1.setBackground(new java.awt.Color(255, 233, 168));
         jPasswordField1.setText("Masukkan Kata Sandi");
         jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelCustom6Layout = new javax.swing.GroupLayout(panelCustom6);
         panelCustom6.setLayout(panelCustom6Layout);
@@ -131,14 +135,11 @@ public class FrameLogin extends javax.swing.JFrame {
             .addGroup(panelCustom6Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelCustom6Layout.setVerticalGroup(
             panelCustom6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+            .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
         );
 
         jCheckBox3.setText("   Show Password");
@@ -148,49 +149,58 @@ public class FrameLogin extends javax.swing.JFrame {
             }
         });
 
-        bLogin.setBackground(new java.awt.Color(64, 82, 127));
-        bLogin.setText("Masuk");
+        buttonCustom1.setBackground(new java.awt.Color(35, 127, 72));
+        buttonCustom1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Enter.png"))); // NOI18N
+        buttonCustom1.setText("LOGIN");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel3.setText("SD Negeri Cangkringan");
 
         javax.swing.GroupLayout panelShadow2Layout = new javax.swing.GroupLayout(panelShadow2);
         panelShadow2.setLayout(panelShadow2Layout);
         panelShadow2Layout.setHorizontalGroup(
             panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelShadow2Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
                 .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelShadow2Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel1)
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
                         .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)))
-                    .addGroup(panelShadow2Layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel9)
-                            .addGroup(panelShadow2Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jCheckBox3))
-                            .addComponent(jLabel8)
-                            .addComponent(jSeparator1)
-                            .addComponent(panelCustom6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelCustom3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(55, Short.MAX_VALUE))
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)))
+                    .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(panelCustom6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelCustom3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9)
+                        .addComponent(jLabel8)
+                        .addGroup(panelShadow2Layout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(jCheckBox3))
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         panelShadow2Layout.setVerticalGroup(
             panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelShadow2Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
                 .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelShadow2Layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jLabel2)
+                        .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelShadow2Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(22, 22, 22)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4))
+                        .addComponent(jLabel3))
                     .addGroup(panelShadow2Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
+                        .addGap(10, 10, 10)
                         .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
@@ -202,9 +212,9 @@ public class FrameLogin extends javax.swing.JFrame {
                 .addComponent(panelCustom6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBox3)
-                .addGap(18, 18, 18)
-                .addComponent(bLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         jPanel2.add(panelShadow2, new java.awt.GridBagConstraints());
@@ -222,6 +232,10 @@ public class FrameLogin extends javax.swing.JFrame {
     private void tUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tUserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tUserActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,10 +257,11 @@ public class FrameLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private custom.ButtonCustom bLogin;
+    private custom.ButtonCustom buttonCustom1;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

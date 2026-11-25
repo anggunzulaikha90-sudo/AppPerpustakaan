@@ -4,12 +4,15 @@
  */
 package custom;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.geom.RoundRectangle2D;
 import javax.swing.Icon;
 import javax.swing.JButton;
 
@@ -20,42 +23,139 @@ import javax.swing.JButton;
 public class ButtonCustom extends JButton {
 
     private boolean over;
+    private boolean pressed;
+    private boolean active;
+
     private Color fill;
     private Icon icon;
-    
+
     private Color fillOriginal;
     private Color fillOver;
     private Color fillClick;
+    private Color fillActive;
+
     private int strokeWidth;
     private int roundedCorner;
     private int fontSize;
     private GayaFont fontGaya;
-    
-    
+    private Color strokeColor = new Color(255, 255, 255);
+
     public enum GayaFont {
-    PLAIN(java.awt.Font.PLAIN),
-    BOLD(java.awt.Font.BOLD),
-    ITALIC(java.awt.Font.ITALIC),
-    BOLD_ITALIC(java.awt.Font.BOLD | java.awt.Font.ITALIC);
+        PLAIN(Font.PLAIN),
+        BOLD(Font.BOLD),
+        ITALIC(Font.ITALIC),
+        BOLD_ITALIC(Font.BOLD | Font.ITALIC);
 
-    private final int nilai;
+        private final int nilai;
 
-    GayaFont(int nilai) {
-        this.nilai = nilai;
+        GayaFont(int nilai) {
+            this.nilai = nilai;
+        }
+
+        public int getNilai() {
+            return nilai;
+        }
     }
 
-    
-    public int getNilai() {
-        return nilai;
-    }
-}
+    public ButtonCustom() {
+        fillOriginal = new Color(35, 127, 72);
+        fillOver     = new Color(255, 253, 208); // Cream muda saat hover
+        fillClick    = new Color(235, 225, 195); // Cream sedikit gelap saat ditekan
+        fillActive   = new Color(255, 246, 214); // Krem saat menu aktif
 
+        strokeWidth = 2;
+        roundedCorner = 40;
+        icon = null;
+
+        over = false;
+        pressed = false;
+        active = false;
+        fill = fillOriginal;
+
+        setOpaque(false);
+        setBorder(null);
+        setFocusPainted(false);
+        setContentAreaFilled(false);
+        super.setBackground(fillOriginal);
+        setForeground(Color.WHITE);
+
+        fontSize = 14;
+        fontGaya = GayaFont.PLAIN;
+        aturFont();
+
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                over = true;
+                updateFill();
+                repaint();
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                pressed = true;
+                updateFill();
+                repaint();
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                pressed = false;
+                updateFill();
+                repaint();
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                over = false;
+                pressed = false;
+                updateFill();
+                repaint();
+            }
+        });
+    }
+
+    private void updateFill() {
+        if (pressed) {
+            fill = fillClick;
+        } else if (over) {
+            fill = fillOver;
+        } else if (active) {
+            fill = fillActive;
+        } else {
+            fill = fillOriginal;
+        }
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+        updateFill();
+        repaint();
+    }
+
+    public Color getFillActive() {
+        return fillActive;
+    }
+
+    public void setFillActive(Color fillActive) {
+        this.fillActive = fillActive;
+        updateFill();
+        repaint();
+    }
+
+    @Override
     public Icon getIcon() {
         return icon;
     }
 
+    @Override
     public void setIcon(Icon icon) {
         this.icon = icon;
+        super.setIcon(icon);
         repaint();
     }
 
@@ -65,10 +165,9 @@ public class ButtonCustom extends JButton {
 
     public void setFillOriginal(Color fillOriginal) {
         this.fillOriginal = fillOriginal;
-        if(!over){
-            fill = fillOriginal;
-            repaint();
-        }
+        super.setBackground(fillOriginal);
+        updateFill();
+        repaint();
     }
 
     public Color getFillOver() {
@@ -77,10 +176,8 @@ public class ButtonCustom extends JButton {
 
     public void setFillOver(Color fillOver) {
         this.fillOver = fillOver;
-        if(over){
-            fill = fillOver;
-            repaint();
-        }
+        updateFill();
+        repaint();
     }
 
     public Color getFillClick() {
@@ -89,10 +186,8 @@ public class ButtonCustom extends JButton {
 
     public void setFillClick(Color fillClick) {
         this.fillClick = fillClick;
-        if(over){
-            fill = fillClick;
-            repaint();
-        }
+        updateFill();
+        repaint();
     }
 
     public int getStrokeWidth() {
@@ -112,9 +207,9 @@ public class ButtonCustom extends JButton {
         this.roundedCorner = roundedCorner;
         repaint();
     }
-    
+
     public int getFontSize() {
-    return fontSize;
+        return fontSize;
     }
 
     public void setFontSize(int fontSize) {
@@ -132,11 +227,11 @@ public class ButtonCustom extends JButton {
     }
 
     private void aturFont() {
-        setFont(getFont().deriveFont(fontGaya.getNilai(), (float) fontSize));
-        repaint();
+        if (getFont() != null && fontGaya != null) {
+            setFont(getFont().deriveFont(fontGaya.getNilai(), (float) fontSize));
+            repaint();
+        }
     }
-
-    private Color strokeColor = new Color(255, 255, 255);
 
     public Color getStrokeColor() {
         return strokeColor;
@@ -149,95 +244,33 @@ public class ButtonCustom extends JButton {
 
     @Override
     protected void paintComponent(Graphics g) {
-    Graphics2D g2d = (Graphics2D) g.create();
-    g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        Graphics2D g2d = (Graphics2D) g.create();
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-    float s = strokeWidth;
-    // Stroke digambar di tengah garis path, jadi digeser setengah lebar garis
-    // agar tidak terpotong di tepi komponen
-    java.awt.geom.RoundRectangle2D.Float shape = new java.awt.geom.RoundRectangle2D.Float(
-            s / 2f, s / 2f,
-            getWidth() - s, getHeight() - s,
-            roundedCorner, roundedCorner);
+        float s = strokeWidth;
+        RoundRectangle2D.Float shape = new RoundRectangle2D.Float(
+                s / 2f, s / 2f,
+                getWidth() - s, getHeight() - s,
+                roundedCorner, roundedCorner);
 
-    // Isi
-    g2d.setColor(fill);
-    g2d.fill(shape);
+        g2d.setColor(fill != null ? fill : fillOriginal);
+        g2d.fill(shape);
 
-    // Garis border mengikuti lengkungan
-    if (strokeWidth > 0 && strokeColor != null) {
-        g2d.setStroke(new java.awt.BasicStroke(s));
-        g2d.setColor(strokeColor);
-        g2d.draw(shape);
+        if (strokeWidth > 0 && strokeColor != null) {
+            g2d.setStroke(new BasicStroke(s));
+            g2d.setColor(strokeColor);
+            g2d.draw(shape);
+        }
+
+        g2d.dispose();
+        super.paintComponent(g);
     }
 
-    g2d.dispose();
-    super.paintComponent(g);
-}
-    
     @Override
     public void setBackground(Color bg) {
-    super.setBackground(bg);
-    if (fillOriginal != null) {   
-        setFillOriginal(bg);
+        super.setBackground(bg);
+        this.fillOriginal = bg;
+        updateFill();
+        repaint();
     }
-}
-    
-    
-    
-    public ButtonCustom() {
-        fillOriginal = new Color(47,22,138);
-        fillOver = new Color(38,17,112);
-        fillClick = new Color(28,12,82);
-        strokeWidth = 2;
-        roundedCorner =20;
-        fill = fillOriginal;
-        icon = null;
-        
-        setOpaque(false);
-        setBorder(null);
-        setFocusPainted(false);
-        setContentAreaFilled(false);
-        setBackground(fillOriginal);
-        setForeground(Color.WHITE);
-        fontSize = 14;
-        fontGaya = GayaFont.PLAIN;
-        aturFont();
-        
-        addMouseListener(new MouseAdapter(){
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                fill = fillOver;
-                over = true;
-                repaint();
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-                fill = fillClick;
-                repaint();
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                if(over){
-                    fill = fillOver;
-                }else {
-                    fill = fillOriginal;
-                }
-                repaint();
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                fill = fillOriginal;
-                over =  false;
-                repaint();
-            }
-           
-            
-        });
-    }
-    
-    
 }
