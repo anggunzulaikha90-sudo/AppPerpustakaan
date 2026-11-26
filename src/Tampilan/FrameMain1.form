@@ -61,32 +61,15 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="90" max="32767" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="0" pref="240" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="0" pref="90" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel5">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/img/icon-64.png"/>
-                </Property>
-              </Properties>
-            </Component>
-          </SubComponents>
         </Container>
         <Container class="custom.PanelCustom" name="panelCustom3">
           <Properties>
@@ -329,6 +312,11 @@
               </Events>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator2">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="48" green="7f" red="23" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -360,7 +348,7 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="MENU UTAMA"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[180, 30]"/>
+                  <Dimension value="[190, 30]"/>
                 </Property>
               </Properties>
             </Component>
@@ -381,7 +369,7 @@
                 </Property>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[150, 44]"/>
+                  <Dimension value="[190, 44]"/>
                 </Property>
                 <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/img/dashboard-aktif-24.png"/>
@@ -411,7 +399,7 @@
                 <Property name="horizontalTextPosition" type="int" value="0"/>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[150, 44]"/>
+                  <Dimension value="[190, 44]"/>
                 </Property>
                 <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/img/data-master-aktif-24.png"/>
@@ -431,8 +419,22 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="a8" green="e9" red="ff" type="rgb"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                    <CompoundBorder>
+                      <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                        <EmptyBorder bottom="0" left="10" right="0" top="0"/>
+                      </Border>
+                      <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                        <MatteColorBorder bottom="0" left="2" right="0" top="0">
+                          <Color PropertyName="color" blue="6b" green="6f" red="1f" type="rgb"/>
+                        </MatteColorBorder>
+                      </Border>
+                    </CompoundBorder>
+                  </Border>
+                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[150, 164]"/>
+                  <Dimension value="[162, 164]"/>
                 </Property>
                 <Property name="roundBottomLeft" type="int" value="30"/>
                 <Property name="roundBottomRight" type="int" value="30"/>
@@ -481,7 +483,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Data Guru"/>
+                    <Property name="text" type="java.lang.String" value="    Data Guru"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -509,7 +511,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Data Kelas"/>
+                    <Property name="text" type="java.lang.String" value="    Data Kelas"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -537,7 +539,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Data Siswa"/>
+                    <Property name="text" type="java.lang.String" value="    Data Siswa"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -565,7 +567,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Data Kategori"/>
+                    <Property name="text" type="java.lang.String" value="    Data Kategori"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -593,7 +595,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Data Buku"/>
+                    <Property name="text" type="java.lang.String" value="    Data Buku"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -633,7 +635,7 @@
                 <Property name="horizontalTextPosition" type="int" value="0"/>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[150, 44]"/>
+                  <Dimension value="[190, 44]"/>
                 </Property>
                 <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/img/transaksi-aktif-24.png"/>
@@ -653,8 +655,22 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="a8" green="e9" red="ff" type="rgb"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                    <CompoundBorder>
+                      <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                        <EmptyBorder bottom="0" left="10" right="0" top="0"/>
+                      </Border>
+                      <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                        <MatteColorBorder bottom="0" left="2" right="0" top="0">
+                          <Color PropertyName="color" blue="6b" green="6f" red="1f" type="rgb"/>
+                        </MatteColorBorder>
+                      </Border>
+                    </CompoundBorder>
+                  </Border>
+                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[150, 102]"/>
+                  <Dimension value="[162, 102]"/>
                 </Property>
                 <Property name="roundBottomLeft" type="int" value="30"/>
                 <Property name="roundBottomRight" type="int" value="30"/>
@@ -697,7 +713,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Cari Buku"/>
+                    <Property name="text" type="java.lang.String" value="    Cari Buku"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -725,7 +741,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Peminjaman"/>
+                    <Property name="text" type="java.lang.String" value="    Peminjaman"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -753,7 +769,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Pengembalian"/>
+                    <Property name="text" type="java.lang.String" value="    Pengembalian"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -793,7 +809,7 @@
                 <Property name="horizontalTextPosition" type="int" value="0"/>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[150, 44]"/>
+                  <Dimension value="[190, 44]"/>
                 </Property>
                 <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/img/laporan-aktif-24.png"/>
@@ -813,8 +829,22 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="a8" green="e9" red="ff" type="rgb"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                    <CompoundBorder>
+                      <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                        <EmptyBorder bottom="0" left="10" right="0" top="0"/>
+                      </Border>
+                      <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                        <MatteColorBorder bottom="0" left="2" right="0" top="0">
+                          <Color PropertyName="color" blue="6b" green="6f" red="1f" type="rgb"/>
+                        </MatteColorBorder>
+                      </Border>
+                    </CompoundBorder>
+                  </Border>
+                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[150, 102]"/>
+                  <Dimension value="[162, 102]"/>
                 </Property>
                 <Property name="roundBottomLeft" type="int" value="30"/>
                 <Property name="roundBottomRight" type="int" value="30"/>
@@ -857,7 +887,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Data Master"/>
+                    <Property name="text" type="java.lang.String" value="    Data Master"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -885,7 +915,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Peminjaman"/>
+                    <Property name="text" type="java.lang.String" value="    Peminjaman"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -910,7 +940,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="48" green="7f" red="23" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="- Pengembalian"/>
+                    <Property name="text" type="java.lang.String" value="    Pengembalian"/>
                     <Property name="fontGaya" type="custom.ButtonCustom$GayaFont" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="BOLD"/>
                     </Property>
@@ -943,7 +973,7 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="PENGATURAN"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[180, 30]"/>
+                  <Dimension value="[190, 30]"/>
                 </Property>
               </Properties>
             </Component>
@@ -965,7 +995,7 @@
                 <Property name="horizontalTextPosition" type="int" value="0"/>
                 <Property name="iconTextGap" type="int" value="0"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[150, 44]"/>
+                  <Dimension value="[190, 44]"/>
                 </Property>
                 <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/img/akun-pengguna-aktif-24.png"/>

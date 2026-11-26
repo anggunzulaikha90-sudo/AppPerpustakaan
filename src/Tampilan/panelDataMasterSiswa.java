@@ -42,20 +42,16 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
-        panelCustom1 = new custom.PanelCustom();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         buttonCustom3 = new custom.ButtonCustom();
         buttonCustom2 = new custom.ButtonCustom();
         JPanel = new custom.PanelCustom();
         subSiswa = new custom.PanelCustom();
 
-        setBackground(new java.awt.Color(243, 246, 250));
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(243, 246, 250), 30));
+        setBackground(new java.awt.Color(221, 240, 251));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(221, 240, 251), 30));
         setMinimumSize(new java.awt.Dimension(1024, 737));
         setPreferredSize(new java.awt.Dimension(1024, 737));
         setLayout(new java.awt.BorderLayout());
@@ -68,18 +64,13 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
         jPanel4.setPreferredSize(new java.awt.Dimension(964, 80));
         jPanel4.setLayout(new java.awt.BorderLayout());
 
-        jPanel6.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel6.setBackground(new java.awt.Color(221, 240, 251));
         jPanel6.setPreferredSize(new java.awt.Dimension(500, 80));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel15.setText("Data Master");
         jPanel6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 40));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel1.setText("Ringkasan aktivitas perpustakaan hari ini");
-        jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, -1, -1));
 
         jPanel4.add(jPanel6, java.awt.BorderLayout.LINE_START);
 
@@ -90,56 +81,15 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
         jPanel8.setMinimumSize(new java.awt.Dimension(400, 80));
         jPanel8.setPreferredSize(new java.awt.Dimension(400, 80));
 
-        panelCustom1.setBackground(new java.awt.Color(47, 22, 138));
-        panelCustom1.setRoundBottomLeft(90);
-        panelCustom1.setRoundBottomRight(90);
-        panelCustom1.setRoundTopLeft(90);
-        panelCustom1.setRoundTopRight(90);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person (1).png"))); // NOI18N
-
-        javax.swing.GroupLayout panelCustom1Layout = new javax.swing.GroupLayout(panelCustom1);
-        panelCustom1.setLayout(panelCustom1Layout);
-        panelCustom1Layout.setHorizontalGroup(
-            panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        panelCustom1Layout.setVerticalGroup(
-            panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel16.setText("Nama Pengguna");
-
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(panelCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel16)
-                .addContainerGap(67, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel16))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(panelCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(24, Short.MAX_VALUE))
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
         jPanel7.add(jPanel8, java.awt.BorderLayout.LINE_END);
@@ -148,20 +98,20 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
 
         jPanel1.add(jPanel4, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel3.setBackground(new java.awt.Color(221, 240, 251));
         jPanel3.setMinimumSize(new java.awt.Dimension(964, 70));
         jPanel3.setPreferredSize(new java.awt.Dimension(964, 70));
 
         buttonCustom3.setBackground(new java.awt.Color(255, 255, 255));
         buttonCustom3.setForeground(new java.awt.Color(0, 0, 0));
-        buttonCustom3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Scroll Up.png"))); // NOI18N
+        buttonCustom3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Scroll Up (2).png"))); // NOI18N
         buttonCustom3.setText("Naik Kelas");
-        buttonCustom3.setStrokeColor(new java.awt.Color(47, 22, 138));
+        buttonCustom3.setStrokeColor(new java.awt.Color(35, 127, 72));
         buttonCustom3.addActionListener(this::buttonCustom3ActionPerformed);
 
         buttonCustom2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus Math.png"))); // NOI18N
         buttonCustom2.setText("Tambah Siswa");
-        buttonCustom2.setStrokeColor(new java.awt.Color(47, 22, 138));
+        buttonCustom2.setStrokeColor(new java.awt.Color(35, 127, 72));
         buttonCustom2.addActionListener(this::buttonCustom2ActionPerformed);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -189,7 +139,7 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
 
         add(jPanel1, java.awt.BorderLayout.NORTH);
 
-        JPanel.setBackground(new java.awt.Color(243, 246, 250));
+        JPanel.setBackground(new java.awt.Color(221, 240, 251));
         JPanel.setMinimumSize(new java.awt.Dimension(964, 400));
         JPanel.setPreferredSize(new java.awt.Dimension(964, 400));
         JPanel.setRoundBottomLeft(30);
@@ -223,17 +173,13 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
     private custom.PanelCustom JPanel;
     private custom.ButtonCustom buttonCustom2;
     private custom.ButtonCustom buttonCustom3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private custom.PanelCustom panelCustom1;
     private custom.PanelCustom subSiswa;
     // End of variables declaration//GEN-END:variables
 }

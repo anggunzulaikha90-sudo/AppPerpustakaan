@@ -30,22 +30,12 @@ public class panelDashboard extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        panelCustom1 = new custom.PanelCustom();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         panelCustom11 = new custom.PanelCustom();
         panelCustom10 = new custom.PanelCustom();
         jLabel19 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         panelCustom12 = new custom.PanelCustom();
-        jLabel20 = new javax.swing.JLabel();
         panelCustom13 = new custom.PanelCustom();
         panelCustom16 = new custom.PanelCustom();
         jLabel18 = new javax.swing.JLabel();
@@ -83,104 +73,21 @@ public class panelDashboard extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(243, 246, 250));
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(243, 246, 250), 30));
+        setBackground(new java.awt.Color(221, 240, 251));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(221, 240, 251), 30));
         setMinimumSize(new java.awt.Dimension(1024, 737));
         setPreferredSize(new java.awt.Dimension(1024, 737));
         setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setBackground(new java.awt.Color(243, 246, 250));
-        jPanel1.setMinimumSize(new java.awt.Dimension(1024, 200));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 200));
+        jPanel1.setBackground(new java.awt.Color(221, 240, 251));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1024, 80));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 150));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel4.setPreferredSize(new java.awt.Dimension(964, 80));
-        jPanel4.setLayout(new java.awt.BorderLayout());
-
-        jPanel6.setBackground(new java.awt.Color(243, 246, 250));
-        jPanel6.setPreferredSize(new java.awt.Dimension(500, 80));
-        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel15.setText("Dashboard");
-        jPanel6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel1.setText("Ringkasan aktivitas perpustakaan hari ini");
-        jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
-
-        jPanel4.add(jPanel6, java.awt.BorderLayout.LINE_START);
-
-        jPanel7.setBackground(new java.awt.Color(243, 246, 250));
-        jPanel7.setLayout(new java.awt.BorderLayout());
-
-        jPanel8.setBackground(new java.awt.Color(243, 246, 250));
-        jPanel8.setMinimumSize(new java.awt.Dimension(400, 80));
-        jPanel8.setPreferredSize(new java.awt.Dimension(400, 80));
-
-        panelCustom1.setBackground(new java.awt.Color(47, 22, 138));
-        panelCustom1.setRoundBottomLeft(90);
-        panelCustom1.setRoundBottomRight(90);
-        panelCustom1.setRoundTopLeft(90);
-        panelCustom1.setRoundTopRight(90);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Person (1).png"))); // NOI18N
-
-        javax.swing.GroupLayout panelCustom1Layout = new javax.swing.GroupLayout(panelCustom1);
-        panelCustom1.setLayout(panelCustom1Layout);
-        panelCustom1Layout.setHorizontalGroup(
-            panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        panelCustom1Layout.setVerticalGroup(
-            panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel16.setText("Nama Pengguna");
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(panelCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel16)
-                .addContainerGap(67, Short.MAX_VALUE))
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel16))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(panelCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-
-        jPanel7.add(jPanel8, java.awt.BorderLayout.LINE_END);
-
-        jPanel4.add(jPanel7, java.awt.BorderLayout.CENTER);
-
-        jPanel1.add(jPanel4, java.awt.BorderLayout.PAGE_START);
-
-        jPanel5.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel5.setBackground(new java.awt.Color(221, 240, 251));
         jPanel5.setLayout(new java.awt.BorderLayout());
 
-        panelCustom11.setBackground(new java.awt.Color(47, 22, 138));
+        panelCustom11.setBackground(new java.awt.Color(255, 233, 168));
         panelCustom11.setMinimumSize(new java.awt.Dimension(100, 80));
         panelCustom11.setPreferredSize(new java.awt.Dimension(964, 80));
         panelCustom11.setRoundBottomLeft(25);
@@ -189,7 +96,7 @@ public class panelDashboard extends javax.swing.JPanel {
         panelCustom11.setRoundTopRight(25);
         panelCustom11.setLayout(new java.awt.BorderLayout());
 
-        panelCustom10.setBackground(new java.awt.Color(47, 22, 138));
+        panelCustom10.setBackground(new java.awt.Color(255, 233, 168));
         panelCustom10.setPreferredSize(new java.awt.Dimension(400, 80));
         panelCustom10.setRoundBottomLeft(20);
         panelCustom10.setRoundBottomRight(25);
@@ -198,28 +105,21 @@ public class panelDashboard extends javax.swing.JPanel {
         panelCustom10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Selamat Datang");
         panelCustom10.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Senin, 16, November 2026");
         panelCustom10.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
         panelCustom11.add(panelCustom10, java.awt.BorderLayout.LINE_START);
 
-        panelCustom12.setBackground(new java.awt.Color(47, 22, 138));
+        panelCustom12.setBackground(new java.awt.Color(255, 233, 168));
         panelCustom12.setRoundBottomLeft(25);
         panelCustom12.setRoundBottomRight(25);
         panelCustom12.setRoundTopLeft(25);
         panelCustom12.setRoundTopRight(25);
         panelCustom12.setLayout(new java.awt.BorderLayout());
-
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Ellipse 4 (1).png"))); // NOI18N
-        panelCustom12.add(jLabel20, java.awt.BorderLayout.LINE_END);
-
         panelCustom11.add(panelCustom12, java.awt.BorderLayout.CENTER);
 
         jPanel5.add(panelCustom11, java.awt.BorderLayout.PAGE_START);
@@ -294,11 +194,12 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel11.setLayout(new java.awt.CardLayout());
 
-        jPanel24.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel24.setBackground(new java.awt.Color(221, 240, 251));
         jPanel24.setMinimumSize(new java.awt.Dimension(1024, 152));
         jPanel24.setPreferredSize(new java.awt.Dimension(1024, 152));
         jPanel24.setLayout(new java.awt.GridLayout(1, 4, 40, 0));
 
+        jPanel23.setBackground(new java.awt.Color(221, 240, 251));
         jPanel23.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel23.setOpaque(false);
         jPanel23.setPreferredSize(new java.awt.Dimension(200, 152));
@@ -363,6 +264,7 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel24.add(jPanel23);
 
+        jPanel16.setBackground(new java.awt.Color(221, 240, 251));
         jPanel16.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel16.setOpaque(false);
         jPanel16.setPreferredSize(new java.awt.Dimension(200, 152));
@@ -422,6 +324,7 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel24.add(jPanel16);
 
+        jPanel18.setBackground(new java.awt.Color(221, 240, 251));
         jPanel18.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel18.setOpaque(false);
         jPanel18.setPreferredSize(new java.awt.Dimension(200, 152));
@@ -480,6 +383,7 @@ public class panelDashboard extends javax.swing.JPanel {
 
         jPanel24.add(jPanel18);
 
+        jPanel20.setBackground(new java.awt.Color(221, 240, 251));
         jPanel20.setMinimumSize(new java.awt.Dimension(200, 152));
         jPanel20.setOpaque(false);
         jPanel20.setPreferredSize(new java.awt.Dimension(200, 152));
@@ -547,22 +451,15 @@ public class panelDashboard extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -571,9 +468,6 @@ public class panelDashboard extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
@@ -583,15 +477,9 @@ public class panelDashboard extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
-    private custom.PanelCustom panelCustom1;
     private custom.PanelCustom panelCustom10;
     private custom.PanelCustom panelCustom11;
     private custom.PanelCustom panelCustom12;
@@ -600,8 +488,6 @@ public class panelDashboard extends javax.swing.JPanel {
     private custom.PanelCustom panelCustom15;
     private custom.PanelCustom panelCustom16;
     private custom.PanelCustom panelCustom17;
-    private custom.PanelCustom panelCustom2;
-    private custom.PanelCustom panelCustom3;
     private custom.PanelCustom panelCustom4;
     private custom.PanelCustom panelCustom5;
     private custom.PanelCustom panelCustom6;

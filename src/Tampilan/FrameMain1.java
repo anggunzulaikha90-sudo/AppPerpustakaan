@@ -60,6 +60,28 @@ public class FrameMain1 extends javax.swing.JFrame {
       
     }
 
+    
+    private void toggleSub(javax.swing.JComponent target) {
+    javax.swing.JComponent[] semua = {subDataMaster, subTransaksi, subLaporan};
+    for (javax.swing.JComponent p : semua) {
+        if (p == target) {
+            p.setVisible(!p.isVisible());   // yang diklik: buka kalau tertutup, tutup kalau terbuka
+        } else {
+            p.setVisible(false);            // yang lain: tutup
+        }
+    }
+    sideBar1.revalidate();
+    sideBar1.repaint();
+}
+
+    // Tutup semua submenu
+    private void tutupSemuaSub() {
+        subDataMaster.setVisible(false);
+        subTransaksi.setVisible(false);
+        subLaporan.setVisible(false);
+        sideBar1.revalidate();
+        sideBar1.repaint();
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -71,7 +93,6 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         topBar = new custom.PanelCustom();
         panelCustom2 = new custom.PanelCustom();
-        jLabel5 = new javax.swing.JLabel();
         panelCustom3 = new custom.PanelCustom();
         panelCustom1 = new custom.PanelCustom();
         panelCustom5 = new custom.PanelCustom();
@@ -117,23 +138,15 @@ public class FrameMain1 extends javax.swing.JFrame {
         panelCustom2.setBackground(new java.awt.Color(255, 233, 168));
         panelCustom2.setPreferredSize(new java.awt.Dimension(240, 90));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon-64.png"))); // NOI18N
-
         javax.swing.GroupLayout panelCustom2Layout = new javax.swing.GroupLayout(panelCustom2);
         panelCustom2.setLayout(panelCustom2Layout);
         panelCustom2Layout.setHorizontalGroup(
             panelCustom2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom2Layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addComponent(jLabel5)
-                .addContainerGap(90, Short.MAX_VALUE))
+            .addGap(0, 240, Short.MAX_VALUE)
         );
         panelCustom2Layout.setVerticalGroup(
             panelCustom2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(20, Short.MAX_VALUE))
+            .addGap(0, 90, Short.MAX_VALUE)
         );
 
         topBar.add(panelCustom2, java.awt.BorderLayout.LINE_START);
@@ -242,6 +255,8 @@ public class FrameMain1 extends javax.swing.JFrame {
         bLogout.setStrokeWidth(0);
         bLogout.addActionListener(this::bLogoutActionPerformed);
 
+        jSeparator2.setForeground(new java.awt.Color(35, 127, 72));
+
         javax.swing.GroupLayout panelCustom6Layout = new javax.swing.GroupLayout(panelCustom6);
         panelCustom6.setLayout(panelCustom6Layout);
         panelCustom6Layout.setHorizontalGroup(
@@ -275,7 +290,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(35, 127, 72));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText("MENU UTAMA");
-        jLabel6.setPreferredSize(new java.awt.Dimension(180, 30));
+        jLabel6.setPreferredSize(new java.awt.Dimension(190, 30));
         sideBar1.add(jLabel6);
 
         bDashboard1.setBackground(new java.awt.Color(255, 233, 168));
@@ -284,7 +299,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         bDashboard1.setText("Dashboard");
         bDashboard1.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bDashboard1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        bDashboard1.setPreferredSize(new java.awt.Dimension(150, 44));
+        bDashboard1.setPreferredSize(new java.awt.Dimension(190, 44));
         bDashboard1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dashboard-aktif-24.png"))); // NOI18N
         bDashboard1.setStrokeWidth(0);
         bDashboard1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -298,7 +313,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         bDataMaster2.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bDataMaster2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bDataMaster2.setIconTextGap(0);
-        bDataMaster2.setPreferredSize(new java.awt.Dimension(150, 44));
+        bDataMaster2.setPreferredSize(new java.awt.Dimension(190, 44));
         bDataMaster2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/data-master-aktif-24.png"))); // NOI18N
         bDataMaster2.setStrokeColor(new java.awt.Color(255, 153, 0));
         bDataMaster2.setStrokeWidth(0);
@@ -307,7 +322,8 @@ public class FrameMain1 extends javax.swing.JFrame {
         sideBar1.add(bDataMaster2);
 
         subDataMaster.setBackground(new java.awt.Color(255, 233, 168));
-        subDataMaster.setPreferredSize(new java.awt.Dimension(150, 164));
+        subDataMaster.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0), javax.swing.BorderFactory.createMatteBorder(0, 2, 0, 0, new java.awt.Color(31, 111, 107))));
+        subDataMaster.setPreferredSize(new java.awt.Dimension(162, 164));
         subDataMaster.setRoundBottomLeft(30);
         subDataMaster.setRoundBottomRight(30);
         subDataMaster.setRoundTopLeft(30);
@@ -315,7 +331,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bGuru.setBackground(new java.awt.Color(255, 233, 168));
         bGuru.setForeground(new java.awt.Color(35, 127, 72));
-        bGuru.setText("- Data Guru");
+        bGuru.setText("    Data Guru");
         bGuru.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bGuru.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bGuru.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -328,7 +344,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bKelas.setBackground(new java.awt.Color(255, 233, 168));
         bKelas.setForeground(new java.awt.Color(35, 127, 72));
-        bKelas.setText("- Data Kelas");
+        bKelas.setText("    Data Kelas");
         bKelas.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bKelas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bKelas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -341,7 +357,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bSiswa.setBackground(new java.awt.Color(255, 233, 168));
         bSiswa.setForeground(new java.awt.Color(35, 127, 72));
-        bSiswa.setText("- Data Siswa");
+        bSiswa.setText("    Data Siswa");
         bSiswa.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bSiswa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bSiswa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -354,7 +370,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bKategori.setBackground(new java.awt.Color(255, 233, 168));
         bKategori.setForeground(new java.awt.Color(35, 127, 72));
-        bKategori.setText("- Data Kategori");
+        bKategori.setText("    Data Kategori");
         bKategori.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bKategori.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bKategori.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -367,7 +383,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bBuku.setBackground(new java.awt.Color(255, 233, 168));
         bBuku.setForeground(new java.awt.Color(35, 127, 72));
-        bBuku.setText("- Data Buku");
+        bBuku.setText("    Data Buku");
         bBuku.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bBuku.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bBuku.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -415,7 +431,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         bTransaksi4.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bTransaksi4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bTransaksi4.setIconTextGap(0);
-        bTransaksi4.setPreferredSize(new java.awt.Dimension(150, 44));
+        bTransaksi4.setPreferredSize(new java.awt.Dimension(190, 44));
         bTransaksi4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi-aktif-24.png"))); // NOI18N
         bTransaksi4.setStrokeColor(new java.awt.Color(255, 153, 0));
         bTransaksi4.setStrokeWidth(0);
@@ -424,7 +440,8 @@ public class FrameMain1 extends javax.swing.JFrame {
         sideBar1.add(bTransaksi4);
 
         subTransaksi.setBackground(new java.awt.Color(255, 233, 168));
-        subTransaksi.setPreferredSize(new java.awt.Dimension(150, 102));
+        subTransaksi.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0), javax.swing.BorderFactory.createMatteBorder(0, 2, 0, 0, new java.awt.Color(31, 111, 107))));
+        subTransaksi.setPreferredSize(new java.awt.Dimension(162, 102));
         subTransaksi.setRoundBottomLeft(30);
         subTransaksi.setRoundBottomRight(30);
         subTransaksi.setRoundTopLeft(30);
@@ -432,7 +449,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bCariBuku.setBackground(new java.awt.Color(255, 233, 168));
         bCariBuku.setForeground(new java.awt.Color(35, 127, 72));
-        bCariBuku.setText("- Cari Buku");
+        bCariBuku.setText("    Cari Buku");
         bCariBuku.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bCariBuku.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bCariBuku.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -445,7 +462,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bPeminjaman.setBackground(new java.awt.Color(255, 233, 168));
         bPeminjaman.setForeground(new java.awt.Color(35, 127, 72));
-        bPeminjaman.setText("- Peminjaman");
+        bPeminjaman.setText("    Peminjaman");
         bPeminjaman.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bPeminjaman.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bPeminjaman.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -458,7 +475,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bPengembalian.setBackground(new java.awt.Color(255, 233, 168));
         bPengembalian.setForeground(new java.awt.Color(35, 127, 72));
-        bPengembalian.setText("- Pengembalian");
+        bPengembalian.setText("    Pengembalian");
         bPengembalian.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bPengembalian.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bPengembalian.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -500,7 +517,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         bLaporan5.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bLaporan5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bLaporan5.setIconTextGap(0);
-        bLaporan5.setPreferredSize(new java.awt.Dimension(150, 44));
+        bLaporan5.setPreferredSize(new java.awt.Dimension(190, 44));
         bLaporan5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan-aktif-24.png"))); // NOI18N
         bLaporan5.setStrokeColor(new java.awt.Color(255, 153, 0));
         bLaporan5.setStrokeWidth(0);
@@ -509,7 +526,8 @@ public class FrameMain1 extends javax.swing.JFrame {
         sideBar1.add(bLaporan5);
 
         subLaporan.setBackground(new java.awt.Color(255, 233, 168));
-        subLaporan.setPreferredSize(new java.awt.Dimension(150, 102));
+        subLaporan.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0), javax.swing.BorderFactory.createMatteBorder(0, 2, 0, 0, new java.awt.Color(31, 111, 107))));
+        subLaporan.setPreferredSize(new java.awt.Dimension(162, 102));
         subLaporan.setRoundBottomLeft(30);
         subLaporan.setRoundBottomRight(30);
         subLaporan.setRoundTopLeft(30);
@@ -517,7 +535,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bLaporanMaster.setBackground(new java.awt.Color(255, 233, 168));
         bLaporanMaster.setForeground(new java.awt.Color(35, 127, 72));
-        bLaporanMaster.setText("- Data Master");
+        bLaporanMaster.setText("    Data Master");
         bLaporanMaster.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bLaporanMaster.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bLaporanMaster.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -530,7 +548,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bLaporanPmj.setBackground(new java.awt.Color(255, 233, 168));
         bLaporanPmj.setForeground(new java.awt.Color(35, 127, 72));
-        bLaporanPmj.setText("- Peminjaman");
+        bLaporanPmj.setText("    Peminjaman");
         bLaporanPmj.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bLaporanPmj.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bLaporanPmj.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -542,7 +560,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         bLaporanPmg.setBackground(new java.awt.Color(255, 233, 168));
         bLaporanPmg.setForeground(new java.awt.Color(35, 127, 72));
-        bLaporanPmg.setText("- Pengembalian");
+        bLaporanPmg.setText("    Pengembalian");
         bLaporanPmg.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bLaporanPmg.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bLaporanPmg.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -581,7 +599,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(35, 127, 72));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText("PENGATURAN");
-        jLabel7.setPreferredSize(new java.awt.Dimension(180, 30));
+        jLabel7.setPreferredSize(new java.awt.Dimension(190, 30));
         sideBar1.add(jLabel7);
 
         bAkunPengguna1.setBackground(new java.awt.Color(255, 233, 168));
@@ -591,7 +609,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         bAkunPengguna1.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         bAkunPengguna1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bAkunPengguna1.setIconTextGap(0);
-        bAkunPengguna1.setPreferredSize(new java.awt.Dimension(150, 44));
+        bAkunPengguna1.setPreferredSize(new java.awt.Dimension(190, 44));
         bAkunPengguna1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/akun-pengguna-aktif-24.png"))); // NOI18N
         bAkunPengguna1.setStrokeColor(new java.awt.Color(255, 153, 0));
         bAkunPengguna1.setStrokeWidth(0);
@@ -613,9 +631,8 @@ public class FrameMain1 extends javax.swing.JFrame {
     private void bLaporan5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporan5ActionPerformed
         // TODO add your handling code here:
         setActiveMenu(bLaporan5);
-        subLaporan.setVisible(!subLaporan.isVisible());
-        sideBar1.revalidate();
-        sideBar1.repaint();
+        toggleSub(subLaporan);
+        
     }//GEN-LAST:event_bLaporan5ActionPerformed
 
     private void bSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSiswaActionPerformed
@@ -638,15 +655,14 @@ public class FrameMain1 extends javax.swing.JFrame {
     private void bDataMaster2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDataMaster2ActionPerformed
         // TODO add your handling code here:
         setActiveMenu(bDashboard1);
-
-        subDataMaster.setVisible(!subDataMaster.isVisible());
-        sideBar1.revalidate();
-        sideBar1.repaint();
+        toggleSub(subDataMaster);
+        
     }//GEN-LAST:event_bDataMaster2ActionPerformed
 
     private void bAkunPengguna1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAkunPengguna1ActionPerformed
         // TODO add your handling code here:
          setActiveMenu(bAkunPengguna1);
+         tutupSemuaSub();
     }//GEN-LAST:event_bAkunPengguna1ActionPerformed
 
     private void bGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuruActionPerformed
@@ -676,10 +692,8 @@ public class FrameMain1 extends javax.swing.JFrame {
     private void bTransaksi4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTransaksi4ActionPerformed
         // TODO add your handling code here:
         setActiveMenu(bTransaksi4);
-
-        subTransaksi.setVisible(!subTransaksi.isVisible());
-        sideBar1.revalidate();
-        sideBar1.repaint();
+        toggleSub(subTransaksi);
+        
     }//GEN-LAST:event_bTransaksi4ActionPerformed
 
     private void bLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogoutActionPerformed
@@ -691,6 +705,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         setActiveMenu(bDashboard1);
         cardLayout.show(panelUtama, "dashboard");
+        tutupSemuaSub();
     }//GEN-LAST:event_bDashboard1ActionPerformed
 
     private void bKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKelasActionPerformed
@@ -743,7 +758,6 @@ public class FrameMain1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JSeparator jSeparator2;

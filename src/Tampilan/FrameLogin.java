@@ -38,7 +38,6 @@ public class FrameLogin extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         panelShadow2 = new custom.PanelShadow();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -63,8 +62,6 @@ public class FrameLogin extends javax.swing.JFrame {
 
         panelShadow2.setBackground(new java.awt.Color(255, 255, 255));
         panelShadow2.setPreferredSize(new java.awt.Dimension(555, 580));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon-48.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
@@ -149,7 +146,6 @@ public class FrameLogin extends javax.swing.JFrame {
             }
         });
 
-        buttonCustom1.setBackground(new java.awt.Color(35, 127, 72));
         buttonCustom1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Enter.png"))); // NOI18N
         buttonCustom1.setText("LOGIN");
 
@@ -164,11 +160,9 @@ public class FrameLogin extends javax.swing.JFrame {
                 .addGap(58, 58, 58)
                 .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelShadow2Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
+                        .addGap(84, 84, 84)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
                         .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
                             .addComponent(jLabel3)))
@@ -189,18 +183,13 @@ public class FrameLogin extends javax.swing.JFrame {
             .addGroup(panelShadow2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelShadow2Layout.createSequentialGroup()
-                        .addGroup(panelShadow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelShadow2Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(22, 22, 22)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3))
-                    .addGroup(panelShadow2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel1)))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelShadow2Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(22, 22, 22)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
@@ -214,7 +203,7 @@ public class FrameLogin extends javax.swing.JFrame {
                 .addComponent(jCheckBox3)
                 .addGap(31, 31, 31)
                 .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         jPanel2.add(panelShadow2, new java.awt.GridBagConstraints());
@@ -259,7 +248,6 @@ public class FrameLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private custom.ButtonCustom buttonCustom1;
     private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
