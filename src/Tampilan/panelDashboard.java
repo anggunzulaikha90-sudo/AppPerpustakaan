@@ -130,7 +130,7 @@ public class panelDashboard extends javax.swing.JPanel {
 
         panelCustom13.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 0));
-        panelCustom13.setPreferredSize(new java.awt.Dimension(964, 560));
+        panelCustom13.setPreferredSize(new java.awt.Dimension(964, 460));
         panelCustom13.setRoundBottomLeft(30);
         panelCustom13.setRoundBottomRight(30);
         panelCustom13.setRoundTopLeft(30);

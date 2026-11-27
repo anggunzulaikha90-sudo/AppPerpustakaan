@@ -29,14 +29,15 @@ public class panelTambahSiswa extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelCustom13 = new custom.PanelCustom();
         panelCustom6 = new custom.PanelCustom();
         panelCustom2 = new custom.PanelCustom();
         jLabel1 = new javax.swing.JLabel();
         panelCustom5 = new custom.PanelCustom();
         buttonCustom1 = new custom.ButtonCustom();
-        buttonCustom2 = new custom.ButtonCustom();
-        buttonCustom3 = new custom.ButtonCustom();
         buttonCustom4 = new custom.ButtonCustom();
+        buttonCustom5 = new custom.ButtonCustom();
+        buttonCustom6 = new custom.ButtonCustom();
         panelCustom7 = new custom.PanelCustom();
         jLabel2 = new javax.swing.JLabel();
         panelCustom9 = new custom.PanelCustom();
@@ -58,10 +59,14 @@ public class panelTambahSiswa extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(243, 246, 250));
-        setMinimumSize(new java.awt.Dimension(964, 400));
-        setPreferredSize(new java.awt.Dimension(964, 400));
+        setBackground(new java.awt.Color(221, 240, 251));
+        setMinimumSize(new java.awt.Dimension(964, 500));
+        setPreferredSize(new java.awt.Dimension(964, 500));
         setLayout(new java.awt.BorderLayout(20, 0));
+
+        panelCustom13.setBackground(new java.awt.Color(221, 240, 251));
+        panelCustom13.setPreferredSize(new java.awt.Dimension(964, 400));
+        panelCustom13.setLayout(new java.awt.BorderLayout(20, 0));
 
         panelCustom6.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom6.setPreferredSize(new java.awt.Dimension(300, 400));
@@ -112,24 +117,24 @@ public class panelTambahSiswa extends javax.swing.JPanel {
         buttonCustom1.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
         buttonCustom1.setStrokeColor(new java.awt.Color(226, 226, 226));
 
-        buttonCustom2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus Math (1).png"))); // NOI18N
-        buttonCustom2.setText("Tambah");
-        buttonCustom2.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        buttonCustom2.setStrokeColor(new java.awt.Color(47, 22, 138));
-
-        buttonCustom3.setBackground(new java.awt.Color(255, 255, 255));
-        buttonCustom3.setForeground(new java.awt.Color(0, 0, 0));
-        buttonCustom3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Crayon.png"))); // NOI18N
-        buttonCustom3.setText("Ubah");
-        buttonCustom3.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        buttonCustom3.setStrokeColor(new java.awt.Color(47, 22, 138));
-        buttonCustom3.addActionListener(this::buttonCustom3ActionPerformed);
-
-        buttonCustom4.setBackground(new java.awt.Color(218, 40, 40));
-        buttonCustom4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Empty Trash.png"))); // NOI18N
-        buttonCustom4.setText("Hapus");
+        buttonCustom4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus Math (1).png"))); // NOI18N
+        buttonCustom4.setText("Tambah");
         buttonCustom4.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        buttonCustom4.setStrokeColor(new java.awt.Color(218, 40, 40));
+        buttonCustom4.setStrokeColor(new java.awt.Color(35, 127, 72));
+
+        buttonCustom5.setBackground(new java.awt.Color(255, 255, 255));
+        buttonCustom5.setForeground(new java.awt.Color(0, 0, 0));
+        buttonCustom5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Crayon (1).png"))); // NOI18N
+        buttonCustom5.setText("Ubah");
+        buttonCustom5.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        buttonCustom5.setStrokeColor(new java.awt.Color(35, 127, 72));
+        buttonCustom5.addActionListener(this::buttonCustom5ActionPerformed);
+
+        buttonCustom6.setBackground(new java.awt.Color(218, 40, 40));
+        buttonCustom6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Empty Trash.png"))); // NOI18N
+        buttonCustom6.setText("Hapus");
+        buttonCustom6.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        buttonCustom6.setStrokeColor(new java.awt.Color(218, 40, 40));
 
         javax.swing.GroupLayout panelCustom5Layout = new javax.swing.GroupLayout(panelCustom5);
         panelCustom5.setLayout(panelCustom5Layout);
@@ -138,11 +143,11 @@ public class panelTambahSiswa extends javax.swing.JPanel {
             .addGroup(panelCustom5Layout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
                 .addGroup(panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonCustom3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonCustom2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonCustom5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonCustom4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(buttonCustom4, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                    .addComponent(buttonCustom6, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                     .addComponent(buttonCustom1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(15, 15, 15))
         );
@@ -151,12 +156,12 @@ public class panelTambahSiswa extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom5Layout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
                 .addGroup(panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonCustom4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonCustom4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonCustom6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonCustom3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonCustom5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15))
         );
 
@@ -165,7 +170,7 @@ public class panelTambahSiswa extends javax.swing.JPanel {
         panelCustom7.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom7.setPreferredSize(new java.awt.Dimension(300, 230));
 
-        jLabel2.setText("Kelas Asal");
+        jLabel2.setText("ID Siswa");
 
         panelCustom9.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom9.setRoundBottomLeft(20);
@@ -224,7 +229,7 @@ public class panelTambahSiswa extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jLabel5.setText("Kelas Asal");
+        jLabel5.setText("Nama Siswa");
 
         panelCustom12.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom12.setRoundBottomLeft(20);
@@ -287,7 +292,7 @@ public class panelTambahSiswa extends javax.swing.JPanel {
 
         panelCustom6.add(panelCustom7, java.awt.BorderLayout.CENTER);
 
-        add(panelCustom6, java.awt.BorderLayout.LINE_START);
+        panelCustom13.add(panelCustom6, java.awt.BorderLayout.LINE_START);
 
         panelCustom1.setRoundBottomLeft(30);
         panelCustom1.setRoundBottomRight(30);
@@ -308,7 +313,6 @@ public class panelTambahSiswa extends javax.swing.JPanel {
         panelCustom3.add(jLabel3, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setPreferredSize(new java.awt.Dimension(580, 70));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
         panelCustom11.setBackground(new java.awt.Color(255, 255, 255));
@@ -395,23 +399,25 @@ public class panelTambahSiswa extends javax.swing.JPanel {
 
         panelCustom1.add(panelCustom4, java.awt.BorderLayout.CENTER);
 
-        add(panelCustom1, java.awt.BorderLayout.CENTER);
+        panelCustom13.add(panelCustom1, java.awt.BorderLayout.CENTER);
+
+        add(panelCustom13, java.awt.BorderLayout.PAGE_START);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonCustom5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCustom5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonCustom5ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void buttonCustom3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCustom3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonCustom3ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private custom.ButtonCustom buttonCustom1;
-    private custom.ButtonCustom buttonCustom2;
-    private custom.ButtonCustom buttonCustom3;
     private custom.ButtonCustom buttonCustom4;
+    private custom.ButtonCustom buttonCustom5;
+    private custom.ButtonCustom buttonCustom6;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -428,6 +434,7 @@ public class panelTambahSiswa extends javax.swing.JPanel {
     private custom.PanelCustom panelCustom10;
     private custom.PanelCustom panelCustom11;
     private custom.PanelCustom panelCustom12;
+    private custom.PanelCustom panelCustom13;
     private custom.PanelCustom panelCustom2;
     private custom.PanelCustom panelCustom3;
     private custom.PanelCustom panelCustom4;

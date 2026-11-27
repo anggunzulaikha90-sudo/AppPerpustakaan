@@ -29,12 +29,13 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelCustom12 = new custom.PanelCustom();
         panelCustom6 = new custom.PanelCustom();
         panelCustom2 = new custom.PanelCustom();
         jLabel1 = new javax.swing.JLabel();
         panelCustom5 = new custom.PanelCustom();
         buttonCustom1 = new custom.ButtonCustom();
-        buttonCustom2 = new custom.ButtonCustom();
+        buttonCustom4 = new custom.ButtonCustom();
         panelCustom7 = new custom.PanelCustom();
         jLabel2 = new javax.swing.JLabel();
         panelCustom9 = new custom.PanelCustom();
@@ -53,10 +54,14 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(243, 246, 250));
-        setMinimumSize(new java.awt.Dimension(964, 400));
-        setPreferredSize(new java.awt.Dimension(964, 400));
+        setBackground(new java.awt.Color(221, 240, 251));
+        setMinimumSize(new java.awt.Dimension(964, 500));
+        setPreferredSize(new java.awt.Dimension(964, 500));
         setLayout(new java.awt.BorderLayout(20, 0));
+
+        panelCustom12.setBackground(new java.awt.Color(221, 240, 251));
+        panelCustom12.setPreferredSize(new java.awt.Dimension(964, 400));
+        panelCustom12.setLayout(new java.awt.BorderLayout(20, 0));
 
         panelCustom6.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom6.setPreferredSize(new java.awt.Dimension(300, 400));
@@ -104,11 +109,11 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
         buttonCustom1.setForeground(new java.awt.Color(0, 0, 0));
         buttonCustom1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-close-25.png"))); // NOI18N
         buttonCustom1.setText("Batal");
-        buttonCustom1.setStrokeColor(new java.awt.Color(47, 22, 138));
+        buttonCustom1.setStrokeColor(new java.awt.Color(35, 127, 72));
 
-        buttonCustom2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Scroll Up (1).png"))); // NOI18N
-        buttonCustom2.setText("Naik Kelas");
-        buttonCustom2.setStrokeColor(new java.awt.Color(47, 22, 138));
+        buttonCustom4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Scroll Up (1).png"))); // NOI18N
+        buttonCustom4.setText("Naik Kelas");
+        buttonCustom4.setStrokeColor(new java.awt.Color(35, 127, 72));
 
         javax.swing.GroupLayout panelCustom5Layout = new javax.swing.GroupLayout(panelCustom5);
         panelCustom5.setLayout(panelCustom5Layout);
@@ -116,7 +121,7 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
             panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCustom5Layout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(buttonCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(buttonCustom4, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
@@ -127,7 +132,7 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addGroup(panelCustom5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonCustom4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(101, Short.MAX_VALUE))
         );
 
@@ -225,7 +230,7 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
 
         panelCustom6.add(panelCustom7, java.awt.BorderLayout.CENTER);
 
-        add(panelCustom6, java.awt.BorderLayout.LINE_START);
+        panelCustom12.add(panelCustom6, java.awt.BorderLayout.LINE_START);
 
         panelCustom1.setRoundBottomLeft(30);
         panelCustom1.setRoundBottomRight(30);
@@ -246,7 +251,6 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
         panelCustom3.add(jLabel3, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setPreferredSize(new java.awt.Dimension(580, 70));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
         panelCustom11.setBackground(new java.awt.Color(255, 255, 255));
@@ -333,7 +337,9 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
 
         panelCustom1.add(panelCustom4, java.awt.BorderLayout.CENTER);
 
-        add(panelCustom1, java.awt.BorderLayout.CENTER);
+        panelCustom12.add(panelCustom1, java.awt.BorderLayout.CENTER);
+
+        add(panelCustom12, java.awt.BorderLayout.PAGE_START);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -343,7 +349,7 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private custom.ButtonCustom buttonCustom1;
-    private custom.ButtonCustom buttonCustom2;
+    private custom.ButtonCustom buttonCustom4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
@@ -357,6 +363,7 @@ public class panelSiswaNaikKelas extends javax.swing.JPanel {
     private custom.PanelCustom panelCustom1;
     private custom.PanelCustom panelCustom10;
     private custom.PanelCustom panelCustom11;
+    private custom.PanelCustom panelCustom12;
     private custom.PanelCustom panelCustom2;
     private custom.PanelCustom panelCustom3;
     private custom.PanelCustom panelCustom4;

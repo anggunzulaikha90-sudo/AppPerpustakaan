@@ -69,15 +69,15 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel15.setText("Data Master");
+        jLabel15.setText("Data Siswa");
         jPanel6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 40));
 
         jPanel4.add(jPanel6, java.awt.BorderLayout.LINE_START);
 
-        jPanel7.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel7.setBackground(new java.awt.Color(221, 240, 251));
         jPanel7.setLayout(new java.awt.BorderLayout());
 
-        jPanel8.setBackground(new java.awt.Color(243, 246, 250));
+        jPanel8.setBackground(new java.awt.Color(221, 240, 251));
         jPanel8.setMinimumSize(new java.awt.Dimension(400, 80));
         jPanel8.setPreferredSize(new java.awt.Dimension(400, 80));
 
@@ -148,7 +148,8 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
         JPanel.setRoundTopRight(30);
         JPanel.setLayout(new java.awt.BorderLayout());
 
-        subSiswa.setPreferredSize(new java.awt.Dimension(964, 400));
+        subSiswa.setBackground(new java.awt.Color(221, 240, 251));
+        subSiswa.setPreferredSize(new java.awt.Dimension(964, 500));
         subSiswa.setRoundBottomLeft(30);
         subSiswa.setRoundBottomRight(30);
         subSiswa.setRoundTopLeft(30);

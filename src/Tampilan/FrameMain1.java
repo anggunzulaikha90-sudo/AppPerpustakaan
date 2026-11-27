@@ -57,6 +57,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         cardLayout = (CardLayout)panelUtama.getLayout();
         panelUtama.add(new panelDashboard(), "dashboard");
         panelUtama.add(new panelDataMasterSiswa(), "DataMasterSiswa");
+        panelUtama.add(new panelPeminjaman(), "peminjaman");
       
     }
 
@@ -323,7 +324,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         subDataMaster.setBackground(new java.awt.Color(255, 233, 168));
         subDataMaster.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0), javax.swing.BorderFactory.createMatteBorder(0, 2, 0, 0, new java.awt.Color(31, 111, 107))));
-        subDataMaster.setPreferredSize(new java.awt.Dimension(162, 164));
+        subDataMaster.setPreferredSize(new java.awt.Dimension(162, 200));
         subDataMaster.setRoundBottomLeft(30);
         subDataMaster.setRoundBottomRight(30);
         subDataMaster.setRoundTopLeft(30);
@@ -336,7 +337,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         bGuru.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bGuru.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bGuru.setIconTextGap(0);
-        bGuru.setPreferredSize(new java.awt.Dimension(150, 44));
+        bGuru.setPreferredSize(new java.awt.Dimension(150, 35));
         bGuru.setStrokeColor(new java.awt.Color(255, 153, 0));
         bGuru.setStrokeWidth(0);
         bGuru.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -349,7 +350,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         bKelas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bKelas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bKelas.setIconTextGap(0);
-        bKelas.setPreferredSize(new java.awt.Dimension(150, 44));
+        bKelas.setPreferredSize(new java.awt.Dimension(150, 35));
         bKelas.setStrokeColor(new java.awt.Color(255, 153, 0));
         bKelas.setStrokeWidth(0);
         bKelas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -362,7 +363,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         bSiswa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bSiswa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bSiswa.setIconTextGap(0);
-        bSiswa.setPreferredSize(new java.awt.Dimension(150, 44));
+        bSiswa.setPreferredSize(new java.awt.Dimension(150, 35));
         bSiswa.setStrokeColor(new java.awt.Color(255, 153, 0));
         bSiswa.setStrokeWidth(0);
         bSiswa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -375,7 +376,8 @@ public class FrameMain1 extends javax.swing.JFrame {
         bKategori.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bKategori.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bKategori.setIconTextGap(0);
-        bKategori.setPreferredSize(new java.awt.Dimension(150, 44));
+        bKategori.setMinimumSize(new java.awt.Dimension(150, 35));
+        bKategori.setPreferredSize(new java.awt.Dimension(150, 35));
         bKategori.setStrokeColor(new java.awt.Color(255, 153, 0));
         bKategori.setStrokeWidth(0);
         bKategori.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -388,7 +390,7 @@ public class FrameMain1 extends javax.swing.JFrame {
         bBuku.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bBuku.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bBuku.setIconTextGap(0);
-        bBuku.setPreferredSize(new java.awt.Dimension(150, 44));
+        bBuku.setPreferredSize(new java.awt.Dimension(150, 35));
         bBuku.setStrokeColor(new java.awt.Color(255, 153, 0));
         bBuku.setStrokeWidth(0);
         bBuku.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -410,16 +412,16 @@ public class FrameMain1 extends javax.swing.JFrame {
         subDataMasterLayout.setVerticalGroup(
             subDataMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(subDataMasterLayout.createSequentialGroup()
-                .addComponent(bGuru, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bGuru, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bBuku, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 5, Short.MAX_VALUE))
+                .addComponent(bKategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(bBuku, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         sideBar1.add(subDataMaster);
@@ -716,6 +718,7 @@ public class FrameMain1 extends javax.swing.JFrame {
     private void bPeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPeminjamanActionPerformed
         // TODO add your handling code here:
         setActiveMenu(bPeminjaman);
+        cardLayout.show(panelUtama, "peminjaman");
     }//GEN-LAST:event_bPeminjamanActionPerformed
 
     /**
