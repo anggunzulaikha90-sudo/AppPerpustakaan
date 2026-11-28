@@ -50,6 +50,9 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
         buttonCustom2 = new custom.ButtonCustom();
         JPanel = new custom.PanelCustom();
         subSiswa = new custom.PanelCustom();
+        panelCustom17 = new custom.PanelCustom();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(221, 240, 251));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(221, 240, 251), 30));
@@ -69,7 +72,7 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
         jPanel6.setPreferredSize(new java.awt.Dimension(500, 80));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel15.setText("Data Siswa");
         jPanel6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 40));
 
@@ -156,6 +159,35 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
         subSiswa.setRoundTopLeft(30);
         subSiswa.setRoundTopRight(30);
         subSiswa.setLayout(new java.awt.CardLayout());
+
+        panelCustom17.setBackground(new java.awt.Color(255, 255, 255));
+        panelCustom17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 20));
+        panelCustom17.setPreferredSize(new java.awt.Dimension(140, 510));
+        panelCustom17.setRoundBottomLeft(30);
+        panelCustom17.setRoundBottomRight(30);
+        panelCustom17.setRoundTopLeft(30);
+        panelCustom17.setRoundTopRight(30);
+        panelCustom17.setLayout(new java.awt.CardLayout());
+
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(100, 490));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        panelCustom17.add(jScrollPane2, "card2");
+
+        subSiswa.add(panelCustom17, "card2");
+
         JPanel.add(subSiswa, java.awt.BorderLayout.PAGE_START);
 
         add(JPanel, java.awt.BorderLayout.CENTER);
@@ -183,6 +215,9 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
+    private custom.PanelCustom panelCustom17;
     private custom.PanelCustom subSiswa;
     // End of variables declaration//GEN-END:variables
 }

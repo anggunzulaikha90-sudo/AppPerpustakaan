@@ -100,7 +100,6 @@ public class FrameMain1 extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         panelCustom4 = new custom.PanelCustom();
-        jLabel2 = new javax.swing.JLabel();
         sideBar = new custom.PanelCustom();
         panelCustom6 = new custom.PanelCustom();
         bLogout = new custom.ButtonCustom();
@@ -134,7 +133,8 @@ public class FrameMain1 extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1024, 737));
         setPreferredSize(new java.awt.Dimension(1024, 737));
 
-        topBar.setPreferredSize(new java.awt.Dimension(1024, 90));
+        topBar.setMinimumSize(new java.awt.Dimension(300, 70));
+        topBar.setPreferredSize(new java.awt.Dimension(1024, 70));
         topBar.setLayout(new java.awt.BorderLayout());
 
         panelCustom2.setBackground(new java.awt.Color(255, 233, 168));
@@ -148,12 +148,13 @@ public class FrameMain1 extends javax.swing.JFrame {
         );
         panelCustom2Layout.setVerticalGroup(
             panelCustom2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addGap(0, 70, Short.MAX_VALUE)
         );
 
         topBar.add(panelCustom2, java.awt.BorderLayout.LINE_START);
 
         panelCustom3.setBackground(new java.awt.Color(221, 240, 251));
+        panelCustom3.setPreferredSize(new java.awt.Dimension(804, 70));
         panelCustom3.setLayout(new java.awt.BorderLayout());
 
         panelCustom1.setBackground(new java.awt.Color(221, 240, 251));
@@ -194,48 +195,37 @@ public class FrameMain1 extends javax.swing.JFrame {
         panelCustom1Layout.setHorizontalGroup(
             panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom1Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
+                .addGap(65, 65, 65)
                 .addComponent(panelCustom5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
         panelCustom1Layout.setVerticalGroup(
             panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(15, 15, 15)
                 .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelCustom1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(jLabel3))
                     .addComponent(panelCustom5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         panelCustom3.add(panelCustom1, java.awt.BorderLayout.LINE_END);
 
         panelCustom4.setBackground(new java.awt.Color(221, 240, 251));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(27, 120, 160));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Perpustakaan SD Negeri Cangkringan");
-
         javax.swing.GroupLayout panelCustom4Layout = new javax.swing.GroupLayout(panelCustom4);
         panelCustom4.setLayout(panelCustom4Layout);
         panelCustom4Layout.setHorizontalGroup(
             panelCustom4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom4Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 730, Short.MAX_VALUE)
         );
         panelCustom4Layout.setVerticalGroup(
             panelCustom4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCustom4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 70, Short.MAX_VALUE)
         );
 
         panelCustom3.add(panelCustom4, java.awt.BorderLayout.CENTER);
@@ -299,8 +289,9 @@ public class FrameMain1 extends javax.swing.JFrame {
         bDashboard1.setForeground(new java.awt.Color(35, 127, 72));
         bDashboard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dashboard-24.png"))); // NOI18N
         bDashboard1.setText("Dashboard");
-        bDashboard1.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        bDashboard1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bDashboard1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bDashboard1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bDashboard1.setMargin(new java.awt.Insets(2, 20, 3, 20));
         bDashboard1.setPreferredSize(new java.awt.Dimension(190, 44));
         bDashboard1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dashboard-aktif-24.png"))); // NOI18N
         bDashboard1.setStrokeWidth(0);
@@ -312,9 +303,9 @@ public class FrameMain1 extends javax.swing.JFrame {
         bDataMaster2.setForeground(new java.awt.Color(35, 127, 72));
         bDataMaster2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/data-master-24.png"))); // NOI18N
         bDataMaster2.setText("Data Master");
-        bDataMaster2.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        bDataMaster2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        bDataMaster2.setIconTextGap(0);
+        bDataMaster2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bDataMaster2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bDataMaster2.setMargin(new java.awt.Insets(2, 20, 3, 20));
         bDataMaster2.setPreferredSize(new java.awt.Dimension(190, 44));
         bDataMaster2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/data-master-aktif-24.png"))); // NOI18N
         bDataMaster2.setStrokeColor(new java.awt.Color(255, 153, 0));
@@ -325,7 +316,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         subDataMaster.setBackground(new java.awt.Color(255, 233, 168));
         subDataMaster.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0), javax.swing.BorderFactory.createMatteBorder(0, 2, 0, 0, new java.awt.Color(31, 111, 107))));
-        subDataMaster.setPreferredSize(new java.awt.Dimension(162, 200));
+        subDataMaster.setPreferredSize(new java.awt.Dimension(210, 200));
         subDataMaster.setRoundBottomLeft(30);
         subDataMaster.setRoundBottomRight(30);
         subDataMaster.setRoundTopLeft(30);
@@ -402,21 +393,22 @@ public class FrameMain1 extends javax.swing.JFrame {
         subDataMasterLayout.setHorizontalGroup(
             subDataMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(subDataMasterLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(subDataMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bGuru, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bKelas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bSiswa, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bKategori, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bBuku, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addGroup(subDataMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(bKategori, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                    .addComponent(bSiswa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bKelas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bGuru, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bBuku, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         subDataMasterLayout.setVerticalGroup(
             subDataMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(subDataMasterLayout.createSequentialGroup()
                 .addComponent(bGuru, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
                 .addComponent(bSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bKategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -431,9 +423,10 @@ public class FrameMain1 extends javax.swing.JFrame {
         bTransaksi4.setForeground(new java.awt.Color(35, 127, 72));
         bTransaksi4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi-24.png"))); // NOI18N
         bTransaksi4.setText("Transaksi");
-        bTransaksi4.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        bTransaksi4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        bTransaksi4.setIconTextGap(0);
+        bTransaksi4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bTransaksi4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bTransaksi4.setIconTextGap(5);
+        bTransaksi4.setMargin(new java.awt.Insets(2, 20, 3, 20));
         bTransaksi4.setPreferredSize(new java.awt.Dimension(190, 44));
         bTransaksi4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/transaksi-aktif-24.png"))); // NOI18N
         bTransaksi4.setStrokeColor(new java.awt.Color(255, 153, 0));
@@ -444,7 +437,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         subTransaksi.setBackground(new java.awt.Color(255, 233, 168));
         subTransaksi.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0), javax.swing.BorderFactory.createMatteBorder(0, 2, 0, 0, new java.awt.Color(31, 111, 107))));
-        subTransaksi.setPreferredSize(new java.awt.Dimension(220, 130));
+        subTransaksi.setPreferredSize(new java.awt.Dimension(210, 170));
         subTransaksi.setRoundBottomLeft(30);
         subTransaksi.setRoundBottomRight(30);
         subTransaksi.setRoundTopLeft(30);
@@ -510,23 +503,22 @@ public class FrameMain1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(subTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(bPgbMandiri, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                    .addGroup(subTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(bPgbKolektif, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                        .addComponent(bPmjMandiri, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bPmjKolektif, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(0, 15, Short.MAX_VALUE))
+                    .addComponent(bPgbKolektif, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                    .addComponent(bPmjMandiri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bPmjKolektif, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 5, Short.MAX_VALUE))
         );
         subTransaksiLayout.setVerticalGroup(
             subTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(subTransaksiLayout.createSequentialGroup()
-                .addComponent(bPmjKolektif, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bPmjKolektif, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bPmjMandiri, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bPmjMandiri, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bPgbKolektif, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bPgbKolektif, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bPgbMandiri, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addComponent(bPgbMandiri, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
         sideBar1.add(subTransaksi);
@@ -535,9 +527,10 @@ public class FrameMain1 extends javax.swing.JFrame {
         bLaporan5.setForeground(new java.awt.Color(35, 127, 72));
         bLaporan5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan-24.png"))); // NOI18N
         bLaporan5.setText("Laporan");
-        bLaporan5.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        bLaporan5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        bLaporan5.setIconTextGap(0);
+        bLaporan5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bLaporan5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bLaporan5.setIconTextGap(5);
+        bLaporan5.setMargin(new java.awt.Insets(2, 20, 3, 20));
         bLaporan5.setPreferredSize(new java.awt.Dimension(190, 44));
         bLaporan5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporan-aktif-24.png"))); // NOI18N
         bLaporan5.setStrokeColor(new java.awt.Color(255, 153, 0));
@@ -548,7 +541,7 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         subLaporan.setBackground(new java.awt.Color(255, 233, 168));
         subLaporan.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0), javax.swing.BorderFactory.createMatteBorder(0, 2, 0, 0, new java.awt.Color(31, 111, 107))));
-        subLaporan.setPreferredSize(new java.awt.Dimension(162, 102));
+        subLaporan.setPreferredSize(new java.awt.Dimension(210, 120));
         subLaporan.setRoundBottomLeft(30);
         subLaporan.setRoundBottomRight(30);
         subLaporan.setRoundTopLeft(30);
@@ -597,21 +590,21 @@ public class FrameMain1 extends javax.swing.JFrame {
         subLaporanLayout.setHorizontalGroup(
             subLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(subLaporanLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(subLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bLaporanMaster, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bLaporanPmj, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bLaporanPmg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addGroup(subLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bLaporanMaster, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                    .addComponent(bLaporanPmj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bLaporanPmg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         subLaporanLayout.setVerticalGroup(
             subLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(subLaporanLayout.createSequentialGroup()
-                .addComponent(bLaporanMaster, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bLaporanMaster, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bLaporanPmj, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bLaporanPmj, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bLaporanPmg, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 9, Short.MAX_VALUE))
+                .addComponent(bLaporanPmg, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
         );
 
         sideBar1.add(subLaporan);
@@ -627,9 +620,10 @@ public class FrameMain1 extends javax.swing.JFrame {
         bAkunPengguna1.setForeground(new java.awt.Color(35, 127, 72));
         bAkunPengguna1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/akun-pengguna-24.png"))); // NOI18N
         bAkunPengguna1.setText("Akun Pengguna");
-        bAkunPengguna1.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        bAkunPengguna1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        bAkunPengguna1.setIconTextGap(0);
+        bAkunPengguna1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bAkunPengguna1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bAkunPengguna1.setIconTextGap(5);
+        bAkunPengguna1.setMargin(new java.awt.Insets(2, 20, 3, 20));
         bAkunPengguna1.setPreferredSize(new java.awt.Dimension(190, 44));
         bAkunPengguna1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/akun-pengguna-aktif-24.png"))); // NOI18N
         bAkunPengguna1.setStrokeColor(new java.awt.Color(255, 153, 0));
@@ -784,7 +778,6 @@ public class FrameMain1 extends javax.swing.JFrame {
     private custom.ButtonCustom bPmjMandiri;
     private custom.ButtonCustom bSiswa;
     private custom.ButtonCustom bTransaksi4;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;

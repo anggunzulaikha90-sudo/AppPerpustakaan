@@ -23,7 +23,9 @@ public class panelPmjKolektif extends javax.swing.JPanel {
     public panelPmjKolektif() {
         initComponents();
         jDateChooser1.setBorder(null);
-    ((JTextField) jDateChooser1.getDateEditor().getUiComponent()).setBorder(null);
+        ((JTextField) jDateChooser1.getDateEditor().getUiComponent()).setBorder(null);
+        jDateChooser2.setBorder(null);
+        ((JTextField) jDateChooser2.getDateEditor().getUiComponent()).setBorder(null);
     }
      
    
@@ -98,7 +100,7 @@ public class panelPmjKolektif extends javax.swing.JPanel {
         jPanel4.setLayout(new java.awt.BorderLayout());
 
         jLabel15.setBackground(new java.awt.Color(221, 240, 251));
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel15.setText("Peminjaman Kolektif");
         jLabel15.setPreferredSize(new java.awt.Dimension(157, 45));
         jPanel4.add(jLabel15, java.awt.BorderLayout.CENTER);
