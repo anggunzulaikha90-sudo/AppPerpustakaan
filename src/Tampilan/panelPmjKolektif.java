@@ -14,13 +14,13 @@ import javax.swing.JTextField;
  *
  * @author ANGGUN Z
  */
-public class panelPeminjaman extends javax.swing.JPanel {
+public class panelPmjKolektif extends javax.swing.JPanel {
 
     private  CardLayout cardLayout;
     /**
      * Creates new form dashboard
      */
-    public panelPeminjaman() {
+    public panelPmjKolektif() {
         initComponents();
         jDateChooser1.setBorder(null);
     ((JTextField) jDateChooser1.getDateEditor().getUiComponent()).setBorder(null);
@@ -57,13 +57,13 @@ public class panelPeminjaman extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         panelCustom9 = new custom.PanelCustom();
-        jTextField2 = new javax.swing.JTextField();
+        jComboBox5 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         panelCustom10 = new custom.PanelCustom();
         jTextField4 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         panelCustom13 = new custom.PanelCustom();
-        jTextField5 = new javax.swing.JTextField();
+        jComboBox4 = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         panelCustom11 = new custom.PanelCustom();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
@@ -74,9 +74,12 @@ public class panelPeminjaman extends javax.swing.JPanel {
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         panelCustom12 = new custom.PanelCustom();
-        jTextField3 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        buttonCustom1 = new custom.ButtonCustom();
+        buttonCustom4 = new custom.ButtonCustom();
+        buttonCustom5 = new custom.ButtonCustom();
+        buttonCustom3 = new custom.ButtonCustom();
+        buttonCustom7 = new custom.ButtonCustom();
         panelCustom2 = new custom.PanelCustom();
 
         setBackground(new java.awt.Color(221, 240, 251));
@@ -96,7 +99,7 @@ public class panelPeminjaman extends javax.swing.JPanel {
 
         jLabel15.setBackground(new java.awt.Color(221, 240, 251));
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel15.setText("Peminjaman");
+        jLabel15.setText("Peminjaman Kolektif");
         jLabel15.setPreferredSize(new java.awt.Dimension(157, 45));
         jPanel4.add(jLabel15, java.awt.BorderLayout.CENTER);
 
@@ -140,7 +143,7 @@ public class panelPeminjaman extends javax.swing.JPanel {
         );
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel10.setText("Pilih Siswa");
+        jLabel10.setText("Cari Buku");
 
         javax.swing.GroupLayout panelCustom5Layout = new javax.swing.GroupLayout(panelCustom5);
         panelCustom5.setLayout(panelCustom5Layout);
@@ -199,7 +202,7 @@ public class panelPeminjaman extends javax.swing.JPanel {
         );
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel12.setText("Cari Buku");
+        jLabel12.setText("Daftar Siswa");
 
         javax.swing.GroupLayout panelCustom6Layout = new javax.swing.GroupLayout(panelCustom6);
         panelCustom6.setLayout(panelCustom6Layout);
@@ -327,7 +330,7 @@ public class panelPeminjaman extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel1.setText("Form Peminjaman");
 
-        jLabel2.setText("ID Peminjaman");
+        jLabel2.setText("Kelas");
 
         panelCustom9.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom9.setPreferredSize(new java.awt.Dimension(164, 42));
@@ -338,7 +341,8 @@ public class panelPeminjaman extends javax.swing.JPanel {
         panelCustom9.setStrokeColor(new java.awt.Color(204, 204, 204));
         panelCustom9.setStrokeWidth(1);
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
 
         javax.swing.GroupLayout panelCustom9Layout = new javax.swing.GroupLayout(panelCustom9);
         panelCustom9.setLayout(panelCustom9Layout);
@@ -346,18 +350,18 @@ public class panelPeminjaman extends javax.swing.JPanel {
             panelCustom9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         panelCustom9Layout.setVerticalGroup(
             panelCustom9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField2)
-                .addGap(22, 22, 22))
+                .addComponent(jComboBox5, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jLabel3.setText("Kode Buku");
+        jLabel3.setText("Periode");
 
         panelCustom10.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom10.setRoundBottomLeft(20);
@@ -367,7 +371,9 @@ public class panelPeminjaman extends javax.swing.JPanel {
         panelCustom10.setStrokeColor(new java.awt.Color(204, 204, 204));
         panelCustom10.setStrokeWidth(1);
 
+        jTextField4.setText("  Contoh: 2026/2027");
         jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        jTextField4.addActionListener(this::jTextField4ActionPerformed);
 
         javax.swing.GroupLayout panelCustom10Layout = new javax.swing.GroupLayout(panelCustom10);
         panelCustom10.setLayout(panelCustom10Layout);
@@ -375,8 +381,8 @@ public class panelPeminjaman extends javax.swing.JPanel {
             panelCustom10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jTextField4)
+                .addContainerGap())
         );
         panelCustom10Layout.setVerticalGroup(
             panelCustom10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -386,7 +392,7 @@ public class panelPeminjaman extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jLabel6.setText("Jumlah");
+        jLabel6.setText("Semester");
 
         panelCustom13.setBackground(new java.awt.Color(255, 255, 255));
         panelCustom13.setRoundBottomLeft(20);
@@ -396,7 +402,8 @@ public class panelPeminjaman extends javax.swing.JPanel {
         panelCustom13.setStrokeColor(new java.awt.Color(204, 204, 204));
         panelCustom13.setStrokeWidth(1);
 
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
 
         javax.swing.GroupLayout panelCustom13Layout = new javax.swing.GroupLayout(panelCustom13);
         panelCustom13.setLayout(panelCustom13Layout);
@@ -404,14 +411,14 @@ public class panelPeminjaman extends javax.swing.JPanel {
             panelCustom13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField5)
+                .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         panelCustom13Layout.setVerticalGroup(
             panelCustom13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addComponent(jComboBox4, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -509,7 +516,8 @@ public class panelPeminjaman extends javax.swing.JPanel {
         panelCustom12.setStrokeColor(new java.awt.Color(204, 204, 204));
         panelCustom12.setStrokeWidth(1);
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        jTextField5.addActionListener(this::jTextField5ActionPerformed);
 
         javax.swing.GroupLayout panelCustom12Layout = new javax.swing.GroupLayout(panelCustom12);
         panelCustom12.setLayout(panelCustom12Layout);
@@ -517,54 +525,81 @@ public class panelPeminjaman extends javax.swing.JPanel {
             panelCustom12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jTextField5)
+                .addContainerGap())
         );
         panelCustom12Layout.setVerticalGroup(
             panelCustom12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jLabel5.setText("ID Siswa");
+        jLabel5.setText("Kode Buku");
 
-        buttonCustom1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Done.png"))); // NOI18N
-        buttonCustom1.setText("Tambah Peminjaman");
+        buttonCustom4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Plus Math (1).png"))); // NOI18N
+        buttonCustom4.setText("Tambah");
+        buttonCustom4.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        buttonCustom4.setStrokeColor(new java.awt.Color(35, 127, 72));
+
+        buttonCustom5.setBackground(new java.awt.Color(255, 255, 255));
+        buttonCustom5.setForeground(new java.awt.Color(0, 0, 0));
+        buttonCustom5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Crayon (1).png"))); // NOI18N
+        buttonCustom5.setText("Ubah");
+        buttonCustom5.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        buttonCustom5.setStrokeColor(new java.awt.Color(35, 127, 72));
+        buttonCustom5.addActionListener(this::buttonCustom5ActionPerformed);
+
+        buttonCustom3.setBackground(new java.awt.Color(226, 226, 226));
+        buttonCustom3.setForeground(new java.awt.Color(0, 0, 0));
+        buttonCustom3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-close-25.png"))); // NOI18N
+        buttonCustom3.setText("Batal");
+        buttonCustom3.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        buttonCustom3.setStrokeColor(new java.awt.Color(226, 226, 226));
+
+        buttonCustom7.setBackground(new java.awt.Color(218, 40, 40));
+        buttonCustom7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Empty Trash.png"))); // NOI18N
+        buttonCustom7.setText("Hapus");
+        buttonCustom7.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        buttonCustom7.setMinimumSize(new java.awt.Dimension(152, 42));
+        buttonCustom7.setPreferredSize(new java.awt.Dimension(152, 42));
+        buttonCustom7.setStrokeColor(new java.awt.Color(218, 40, 40));
 
         javax.swing.GroupLayout panelCustom1Layout = new javax.swing.GroupLayout(panelCustom1);
         panelCustom1.setLayout(panelCustom1Layout);
         panelCustom1Layout.setHorizontalGroup(
             panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCustom1Layout.createSequentialGroup()
-                .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel5)
                     .addGroup(panelCustom1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel1))
-                    .addGroup(panelCustom1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel5)
-                                .addGroup(panelCustom1Layout.createSequentialGroup()
-                                    .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel4)
-                                        .addComponent(panelCustom11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jLabel7)
-                                        .addComponent(panelCustom14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(panelCustom9, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
-                                .addComponent(panelCustom12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3)
-                                .addComponent(panelCustom10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(panelCustom13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(panelCustom15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel9)))))
+                            .addComponent(jLabel4)
+                            .addComponent(panelCustom11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7)
+                            .addComponent(panelCustom14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(panelCustom12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3)
+                    .addComponent(panelCustom10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelCustom13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelCustom15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel9)
+                    .addComponent(panelCustom9, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
+                    .addGroup(panelCustom1Layout.createSequentialGroup()
+                        .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(buttonCustom4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                            .addComponent(buttonCustom5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(buttonCustom7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(buttonCustom3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         panelCustom1Layout.setVerticalGroup(
@@ -599,10 +634,19 @@ public class panelPeminjaman extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelCustom15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelCustom1Layout.createSequentialGroup()
+                        .addComponent(panelCustom15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(buttonCustom4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(buttonCustom5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonCustom3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelCustom1Layout.createSequentialGroup()
+                        .addComponent(buttonCustom7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         JPanel.add(panelCustom1, java.awt.BorderLayout.LINE_START);
@@ -619,11 +663,28 @@ public class panelPeminjaman extends javax.swing.JPanel {
         add(JPanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void buttonCustom5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCustom5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonCustom5ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private custom.PanelCustom JPanel;
-    private custom.ButtonCustom buttonCustom1;
+    private custom.ButtonCustom buttonCustom3;
+    private custom.ButtonCustom buttonCustom4;
+    private custom.ButtonCustom buttonCustom5;
+    private custom.ButtonCustom buttonCustom7;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
@@ -643,8 +704,6 @@ public class panelPeminjaman extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private custom.PanelCustom panelCustom1;

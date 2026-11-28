@@ -35,7 +35,7 @@ public class FrameMain1 extends javax.swing.JFrame {
     
     void setActiveMenu(JButton active) {
     JButton[] menu = {bDashboard1, bDataMaster2, bGuru, bKelas,bSiswa,
-        bKategori, bBuku, bTransaksi4,bCariBuku,bPeminjaman, bPengembalian, 
+        bKategori, bBuku, bTransaksi4,bPmjKolektif,bPmjMandiri, bPgbKolektif,bPgbMandiri, 
         bLaporan5, bAkunPengguna1};
     
 
@@ -57,8 +57,8 @@ public class FrameMain1 extends javax.swing.JFrame {
         cardLayout = (CardLayout)panelUtama.getLayout();
         panelUtama.add(new panelDashboard(), "dashboard");
         panelUtama.add(new panelDataMasterSiswa(), "DataMasterSiswa");
-        panelUtama.add(new panelPeminjaman(), "peminjaman");
-      
+        panelUtama.add(new panelPmjMandiri(), "pmjMandiri");
+        panelUtama.add(new panelPmjKolektif(), "pmjKolektif");
     }
 
     
@@ -117,9 +117,10 @@ public class FrameMain1 extends javax.swing.JFrame {
         bBuku = new custom.ButtonCustom();
         bTransaksi4 = new custom.ButtonCustom();
         subTransaksi = new custom.PanelCustom();
-        bCariBuku = new custom.ButtonCustom();
-        bPeminjaman = new custom.ButtonCustom();
-        bPengembalian = new custom.ButtonCustom();
+        bPmjKolektif = new custom.ButtonCustom();
+        bPmjMandiri = new custom.ButtonCustom();
+        bPgbKolektif = new custom.ButtonCustom();
+        bPgbMandiri = new custom.ButtonCustom();
         bLaporan5 = new custom.ButtonCustom();
         subLaporan = new custom.PanelCustom();
         bLaporanMaster = new custom.ButtonCustom();
@@ -443,71 +444,89 @@ public class FrameMain1 extends javax.swing.JFrame {
 
         subTransaksi.setBackground(new java.awt.Color(255, 233, 168));
         subTransaksi.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0), javax.swing.BorderFactory.createMatteBorder(0, 2, 0, 0, new java.awt.Color(31, 111, 107))));
-        subTransaksi.setPreferredSize(new java.awt.Dimension(162, 102));
+        subTransaksi.setPreferredSize(new java.awt.Dimension(220, 130));
         subTransaksi.setRoundBottomLeft(30);
         subTransaksi.setRoundBottomRight(30);
         subTransaksi.setRoundTopLeft(30);
         subTransaksi.setRoundTopRight(30);
 
-        bCariBuku.setBackground(new java.awt.Color(255, 233, 168));
-        bCariBuku.setForeground(new java.awt.Color(35, 127, 72));
-        bCariBuku.setText("    Cari Buku");
-        bCariBuku.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        bCariBuku.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        bCariBuku.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        bCariBuku.setIconTextGap(0);
-        bCariBuku.setPreferredSize(new java.awt.Dimension(150, 44));
-        bCariBuku.setStrokeColor(new java.awt.Color(255, 153, 0));
-        bCariBuku.setStrokeWidth(0);
-        bCariBuku.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        bCariBuku.addActionListener(this::bCariBukuActionPerformed);
+        bPmjKolektif.setBackground(new java.awt.Color(255, 233, 168));
+        bPmjKolektif.setForeground(new java.awt.Color(35, 127, 72));
+        bPmjKolektif.setText("    Peminjaman kolektif");
+        bPmjKolektif.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        bPmjKolektif.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bPmjKolektif.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bPmjKolektif.setIconTextGap(0);
+        bPmjKolektif.setPreferredSize(new java.awt.Dimension(150, 44));
+        bPmjKolektif.setStrokeColor(new java.awt.Color(255, 153, 0));
+        bPmjKolektif.setStrokeWidth(0);
+        bPmjKolektif.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        bPmjKolektif.addActionListener(this::bPmjKolektifActionPerformed);
 
-        bPeminjaman.setBackground(new java.awt.Color(255, 233, 168));
-        bPeminjaman.setForeground(new java.awt.Color(35, 127, 72));
-        bPeminjaman.setText("    Peminjaman");
-        bPeminjaman.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        bPeminjaman.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        bPeminjaman.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        bPeminjaman.setIconTextGap(0);
-        bPeminjaman.setPreferredSize(new java.awt.Dimension(150, 44));
-        bPeminjaman.setStrokeColor(new java.awt.Color(255, 153, 0));
-        bPeminjaman.setStrokeWidth(0);
-        bPeminjaman.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        bPeminjaman.addActionListener(this::bPeminjamanActionPerformed);
+        bPmjMandiri.setBackground(new java.awt.Color(255, 233, 168));
+        bPmjMandiri.setForeground(new java.awt.Color(35, 127, 72));
+        bPmjMandiri.setText("    Peminjaman Mandiri");
+        bPmjMandiri.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        bPmjMandiri.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bPmjMandiri.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bPmjMandiri.setIconTextGap(0);
+        bPmjMandiri.setPreferredSize(new java.awt.Dimension(150, 44));
+        bPmjMandiri.setStrokeColor(new java.awt.Color(255, 153, 0));
+        bPmjMandiri.setStrokeWidth(0);
+        bPmjMandiri.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        bPmjMandiri.addActionListener(this::bPmjMandiriActionPerformed);
 
-        bPengembalian.setBackground(new java.awt.Color(255, 233, 168));
-        bPengembalian.setForeground(new java.awt.Color(35, 127, 72));
-        bPengembalian.setText("    Pengembalian");
-        bPengembalian.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
-        bPengembalian.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        bPengembalian.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        bPengembalian.setIconTextGap(0);
-        bPengembalian.setPreferredSize(new java.awt.Dimension(150, 44));
-        bPengembalian.setStrokeColor(new java.awt.Color(255, 153, 0));
-        bPengembalian.setStrokeWidth(0);
-        bPengembalian.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        bPengembalian.addActionListener(this::bPengembalianActionPerformed);
+        bPgbKolektif.setBackground(new java.awt.Color(255, 233, 168));
+        bPgbKolektif.setForeground(new java.awt.Color(35, 127, 72));
+        bPgbKolektif.setText("    Pengembalian kolektif");
+        bPgbKolektif.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        bPgbKolektif.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bPgbKolektif.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bPgbKolektif.setIconTextGap(0);
+        bPgbKolektif.setPreferredSize(new java.awt.Dimension(150, 44));
+        bPgbKolektif.setStrokeColor(new java.awt.Color(255, 153, 0));
+        bPgbKolektif.setStrokeWidth(0);
+        bPgbKolektif.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        bPgbKolektif.addActionListener(this::bPgbKolektifActionPerformed);
+
+        bPgbMandiri.setBackground(new java.awt.Color(255, 233, 168));
+        bPgbMandiri.setForeground(new java.awt.Color(35, 127, 72));
+        bPgbMandiri.setText("    Pengembalian mandiri");
+        bPgbMandiri.setFontGaya(custom.ButtonCustom.GayaFont.BOLD);
+        bPgbMandiri.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bPgbMandiri.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bPgbMandiri.setIconTextGap(0);
+        bPgbMandiri.setPreferredSize(new java.awt.Dimension(150, 44));
+        bPgbMandiri.setStrokeColor(new java.awt.Color(255, 153, 0));
+        bPgbMandiri.setStrokeWidth(0);
+        bPgbMandiri.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        bPgbMandiri.addActionListener(this::bPgbMandiriActionPerformed);
 
         javax.swing.GroupLayout subTransaksiLayout = new javax.swing.GroupLayout(subTransaksi);
         subTransaksi.setLayout(subTransaksiLayout);
         subTransaksiLayout.setHorizontalGroup(
             subTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(subTransaksiLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(subTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bCariBuku, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bPeminjaman, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bPengembalian, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addGroup(subTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bPgbMandiri, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                    .addGroup(subTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(bPgbKolektif, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                        .addComponent(bPmjMandiri, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(bPmjKolektif, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(0, 15, Short.MAX_VALUE))
         );
         subTransaksiLayout.setVerticalGroup(
             subTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(subTransaksiLayout.createSequentialGroup()
-                .addComponent(bCariBuku, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bPmjKolektif, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bPeminjaman, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bPmjMandiri, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bPengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 9, Short.MAX_VALUE))
+                .addComponent(bPgbKolektif, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bPgbMandiri, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         sideBar1.add(subTransaksi);
@@ -673,15 +692,16 @@ public class FrameMain1 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_bGuruActionPerformed
 
-    private void bCariBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCariBukuActionPerformed
+    private void bPmjKolektifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPmjKolektifActionPerformed
         // TODO add your handling code here:
-        setActiveMenu(bCariBuku);
-    }//GEN-LAST:event_bCariBukuActionPerformed
+        setActiveMenu(bPmjKolektif);
+        cardLayout.show(panelUtama, "pmjKolektif");
+    }//GEN-LAST:event_bPmjKolektifActionPerformed
 
-    private void bPengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPengembalianActionPerformed
+    private void bPgbKolektifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPgbKolektifActionPerformed
         // TODO add your handling code here:
-        setActiveMenu(bPengembalian);
-    }//GEN-LAST:event_bPengembalianActionPerformed
+        setActiveMenu(bPgbKolektif);
+    }//GEN-LAST:event_bPgbKolektifActionPerformed
 
     private void bLaporanMasterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporanMasterActionPerformed
         // TODO add your handling code here:
@@ -715,11 +735,16 @@ public class FrameMain1 extends javax.swing.JFrame {
         setActiveMenu(bKelas);
     }//GEN-LAST:event_bKelasActionPerformed
 
-    private void bPeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPeminjamanActionPerformed
+    private void bPmjMandiriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPmjMandiriActionPerformed
         // TODO add your handling code here:
-        setActiveMenu(bPeminjaman);
-        cardLayout.show(panelUtama, "peminjaman");
-    }//GEN-LAST:event_bPeminjamanActionPerformed
+        setActiveMenu(bPmjMandiri);
+        cardLayout.show(panelUtama, "pmjMandiri");
+    }//GEN-LAST:event_bPmjMandiriActionPerformed
+
+    private void bPgbMandiriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPgbMandiriActionPerformed
+        // TODO add your handling code here:
+        setActiveMenu(bPgbMandiri);
+    }//GEN-LAST:event_bPgbMandiriActionPerformed
 
     /**
      * @param args the command line arguments
@@ -743,7 +768,6 @@ public class FrameMain1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private custom.ButtonCustom bAkunPengguna1;
     private custom.ButtonCustom bBuku;
-    private custom.ButtonCustom bCariBuku;
     private custom.ButtonCustom bDashboard1;
     private custom.ButtonCustom bDataMaster2;
     private custom.ButtonCustom bGuru;
@@ -754,8 +778,10 @@ public class FrameMain1 extends javax.swing.JFrame {
     private custom.ButtonCustom bLaporanPmg;
     private custom.ButtonCustom bLaporanPmj;
     private custom.ButtonCustom bLogout;
-    private custom.ButtonCustom bPeminjaman;
-    private custom.ButtonCustom bPengembalian;
+    private custom.ButtonCustom bPgbKolektif;
+    private custom.ButtonCustom bPgbMandiri;
+    private custom.ButtonCustom bPmjKolektif;
+    private custom.ButtonCustom bPmjMandiri;
     private custom.ButtonCustom bSiswa;
     private custom.ButtonCustom bTransaksi4;
     private javax.swing.JLabel jLabel2;

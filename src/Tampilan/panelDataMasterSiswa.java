@@ -25,6 +25,7 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
     }
      void inisiasiPanel(){
         cardLayout = (CardLayout)subSiswa.getLayout();
+        subSiswa.add(new panelTambahSiswa(), "tambahSiswa");
         subSiswa.add(new panelSiswaNaikKelas(), "naikKelas");
         
     }
@@ -162,6 +163,7 @@ public class panelDataMasterSiswa extends javax.swing.JPanel {
 
     private void buttonCustom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCustom2ActionPerformed
         // TODO add your handling code here:
+        cardLayout.show(subSiswa, "tambahSiswa");
     }//GEN-LAST:event_buttonCustom2ActionPerformed
 
     private void buttonCustom3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCustom3ActionPerformed
